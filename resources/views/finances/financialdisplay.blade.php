@@ -2,20 +2,20 @@
     <tr>
         <th scope="col">{{ __('ID') }}</th>
         @hasrole('admin|driver')
-            <th scope="col">{{ __('Restaurant') }}</th>
+            <th scope="col">{{ __('qrlanding.restaurant') }}</th>
         @endhasrole
-        <th class="table-web" scope="col">{{ __('Created') }}</th>
-        <th class="table-web" scope="col">{{ __('Method') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.created') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.method') }}</th>
 
-        <th class="table-web" scope="col">{{ __('Platform fee') }}</th>
-        <th class="table-web" scope="col">{{ __('Processor fee') }}</th>
-        <th class="table-web" scope="col">{{ __('Delivery') }}</th>
-        <th class="table-web" scope="col">{{ __('Net Price + VAT') }}</th>
-        <th class="table-web" scope="col">{{ __('VAT') }}</th>
-        <th class="table-web" scope="col">{{ __('Net Price') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.platform-fee') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.processor-fee') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.delivery') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.net-price+VAT') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.VAT') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.net-price') }}</th>
         
         
-        <th class="table-web" scope="col">{{ __('Total Price') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.total-price') }}</th>
         
     </tr>
 </thead>
@@ -44,9 +44,9 @@
     </td>
     <td class="table-web">
         @if ($order->delivery_method==1)
-            <span class="badge badge-primary badge-pill">{{ __('Delivery') }} | {{ __($order->payment_method) }} </span>
+            <span class="badge badge-primary badge-pill">{{ __('qrlanding.delivery') }} | {{ __($order->payment_method) }} </span>
         @else
-            <span class="badge badge-success badge-pill">{{ __('Pickup') }} | {{ __($order->payment_method) }}</span>
+            <span class="badge badge-success badge-pill">{{ __('qrlanding.pickup') }} | {{ __($order->payment_method) }}</span>
         @endif
 
     </td>
