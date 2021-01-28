@@ -1,6 +1,6 @@
 
 <div class="card-body">
-    <h6 class="heading-small text-muted mb-4">{{ __('Restaurant information') }}</h6>
+    <h6 class="heading-small text-muted mb-4">{{ __('qrlanding.restaurant-information') }}</h6>
      @include('partials.flash')
      <div class="pl-lg-4">
          <h3>{{ $order->restorant->name }}</h3>
@@ -11,7 +11,7 @@
      <hr class="my-4" />
  
      @if (config('app.isft'))
-         <h6 class="heading-small text-muted mb-4">{{ __('Client Information') }}</h6>
+         <h6 class="heading-small text-muted mb-4">{{ __('qrlanding.client-information') }}</h6>
          <div class="pl-lg-4">
              <h3>{{ $order->client->name }}</h3>
              <h4>{{ $order->client->email }}</h4>
@@ -37,7 +37,7 @@
          <hr class="my-4" />
      @else
          @if ($order->table)
-             <h6 class="heading-small text-muted mb-4">{{ __('Table Information') }}</h6>
+             <h6 class="heading-small text-muted mb-4">{{ __('qrlanding.table-information') }}</h6>
              <div class="pl-lg-4">
                  
                      <h3>{{ __('Table:')." ".$order->table->name }}</h3>
@@ -54,7 +54,7 @@
  
  
      
-     <h6 class="heading-small text-muted mb-4">{{ __('Order') }}</h6>
+     <h6 class="heading-small text-muted mb-4">{{ __('qrlanding.order') }}</h6>
      <?php 
                  $currency=env('CASHIER_CURRENCY','usd');
                  $convert=env('DO_CONVERTION',true);
@@ -94,7 +94,7 @@
                  @endif
  
                  @if (strlen($item->pivot->extras)>2)
-                     <br /><span>{{ __('Extras') }}</span><br />
+                     <br /><span>{{ __('qrlanding.extras') }}</span><br />
                      <ul>
                          @foreach(json_decode($item->pivot->extras) as $extra)
                              <li> {{  $extra }}</li>
@@ -110,12 +110,12 @@
         <h4>{{ __('Comment') }}: {{ $order->comment }}</h4>
      @endif
      @if(strlen($order->phone)>2)
-        <h4>{{ __('Phone') }}: {{ $order->phone }}</h4>
+        <h4>{{ __('qrlanding.phone') }}: {{ $order->phone }}</h4>
      @endif
      <br />
      @if(!empty($order->time_to_prepare))
      <br/>
-     <h4>{{ __('Time to prepare') }}: {{ $order->time_to_prepare ." " .__('minutes')}}</h4>
+     <h4>{{ __('qrlanding.time-to-prepare') }}: {{ $order->time_to_prepare ." " .__('qrlanding.minutes')}}</h4>
      <br/>
      @endif
      @hasrole('admin|driver|owner')
@@ -123,23 +123,23 @@
      <h5>{{ __("VAT") }}: @money( $order->vatvalue, $currency,$convert)</h5>
  
      @endhasrole
-     <h4>{{ __("Sub Total") }}: @money( $order->order_price, $currency,$convert)</h4>
+     <h4>{{ __("qrlanding.sub-rotal") }}: @money( $order->order_price, $currency,$convert)</h4>
      @if(config('app.isft'))
      <h4>{{ __("Delivery") }}: @money( $order->delivery_price, $currency,$convert)</h4>
      @endif
      <hr />
      <h3>{{ __("TOTAL") }}: @money( $order->delivery_price+$order->order_price, $currency,true)</h3>
      <hr />
-     <h4>{{ __("Payment method") }}: {{ __(strtoupper($order->payment_method)) }}</h4>
-     <h4>{{ __("Payment status") }}: {{ __(ucfirst($order->payment_status)) }}</h4>
+     <h4>{{ __("qrlanding.payment-method") }}: {{ __(strtoupper($order->payment_method)) }}</h4>
+     <h4>{{ __("qrlanding.payment-status") }}: {{ __(ucfirst($order->payment_status)) }}</h4>
      <hr />
      @if(config('app.isft'))
-         <h4>{{ __("Delivery method") }}: {{ $order->delivery_method==1?__('Delivery'):__('Pickup') }}</h4>
-         <h3>{{ __("Time slot") }}: @include('orders.partials.time', ['time'=>$order->time_formated])</h3>
+         <h4>{{ __("qrlanding.delivery-method") }}: {{ $order->delivery_method==1?__('qrlanding.delivery'):__('qrlanding.pickup') }}</h4>
+         <h3>{{ __("qrlanding.time-slot") }}: @include('orders.partials.time', ['time'=>$order->time_formated])</h3>
      @else
-         <h4>{{ __("Dine method") }}: {{ $order->delivery_method==3?__('Dine in'):__('Takeaway') }}</h4>
+         <h4>{{ __("qrlanding.dine-method") }}: {{ $order->delivery_method==3?__('qrlanding.dine-in'):__('qrlanding.takeaway') }}</h4>
          @if ($order->delivery_method!=3)
-             <h3>{{ __("Time slot") }}: @include('orders.partials.time', ['time'=>$order->time_formated])</h3>
+             <h3>{{ __("qrlanding.time-slot") }}: @include('orders.partials.time', ['time'=>$order->time_formated])</h3>
          @endif
          
      @endif
