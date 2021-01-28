@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('admin_title')
-    {{__('Dashboard')}}
+    {{__('qrlanding.dashboard')}}
 @endsection
 
 @section('content')
@@ -30,7 +30,7 @@
                         <div class="row align-items-center">
                             <div class="col">
                                 <h6 class="text-uppercase text-light ls-1 mb-1">{{ __('Overview') }}</h6>
-                                <h2 class="text-white mb-0">{{ __('Sales value') }}</h2>
+                                <h2 class="text-white mb-0">{{ __('qrlanding.salesvalue') }}</h2>
                             </div>
 
                         </div>
