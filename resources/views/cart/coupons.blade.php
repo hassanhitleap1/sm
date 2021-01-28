@@ -7,13 +7,13 @@
         <br/>
         <div class="col-md-10 offset-md-1">
             <div class="form-group">
-                <input type="text" class="form-control" id="coupon_code" name="coupon_code" placeholder="{{ __('Enter your promo code here') }}">
-                <small class="text-muted"><strong>{{ __('Only one promo code may be user per order') }}</strong></small>
+                <input type="text" class="form-control" id="coupon_code" name="coupon_code" placeholder="{{ __('qrlanding.enter-your-promo-code-here') }}">
+                <small class="text-muted"><strong>{{ __('qrlanding.only-one-promo-code-may-be-user-per-order') }}</strong></small>
             </div>
         </div>
         <br/>
         <div class="text-center">
-            <button type="button" id="promo_code_btn" class="btn btn-primary btn-sm">{{ __('Apply') }}</button>
+            <button type="button" id="promo_code_btn" class="btn btn-primary btn-sm">{{ __('qrlanding.apply') }}</button>
             <span><i id="promo_code_succ" class="ni ni-check-bold text-success"></i></span>
             <span><i id="promo_code_war" class="ni ni-fat-remove text-danger"></i></span>
         </div>
@@ -23,6 +23,6 @@
 </div>
 <br/>
 <div class="text-center">
-    <a href="{{ url()->previous() }}" class="btn btn-danger btn-sm">{{ __('Cancel Order') }}</a>
+    <a href="{{ url()->previous() }}" class="btn btn-danger btn-sm">{{ __('qrlanding.cancel-order') }}</a>
 </div>
 <br/>
