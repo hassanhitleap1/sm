@@ -1,6 +1,6 @@
 <div class="card card-profile shadow">
     <div class="card-header">
-        <h5 class="h3 mb-0">{{ __("Order Review")}}</h5>
+        <h5 class="h3 mb-0">{{ __("qrlanding.order-review")}}</h5>
     </div>
 <div class="card-body">
     <form role="form" method="post" action="{{ route('rate.order', isset($order)?$order:"") }}">
@@ -11,19 +11,19 @@
             <!-- Rating Stars Box -->
             <div class='rating-stars text-center'>
                 <ul id='stars'>
-                    <li class='star' title={{ __("Poor") }} data-value='1'>
+                    <li class='star' title={{ __("qrlanding.poor") }} data-value='1'>
                         <i class='fa fa-star fa-fw'></i>
                     </li>
-                    <li class='star' title={{ __("Fair") }} data-value='2'>
+                    <li class='star' title={{ __("qrlanding.fair") }} data-value='2'>
                         <i class='fa fa-star fa-fw'></i>
                     </li>
-                    <li class='star' title={{ __("Good") }} data-value='3'>
+                    <li class='star' title={{ __("qrlanding.good") }} data-value='3'>
                         <i class='fa fa-star fa-fw'></i>
                     </li>
-                    <li class='star' title={{ __("Excellent") }} data-value='4'>
+                    <li class='star' title={{ __("qrlanding.excellent") }} data-value='4'>
                         <i class='fa fa-star fa-fw'></i>
                     </li>
-                    <li class='star' title={{ __("WOW") }} data-value='5'>
+                    <li class='star' title={{ __("qrlanding.WOW") }} data-value='5'>
                         <i class='fa fa-star fa-fw'></i>
                     </li>
                 </ul>
@@ -35,7 +35,7 @@
                 <div class='clearfix'></div>
             </div>
             <div id="order_comment" class="form-group{{ $errors->has('comment') ? ' has-danger' : '' }}">
-                <label class="form-control-label" for="name">{{ __('Order comment') }}</label>
+                <label class="form-control-label" for="name">{{ __('qrlanding.order-comment') }}</label>
                 <textarea name="comment" id="comment" class="form-control{{ $errors->has('comment') ? ' is-invalid' : '' }}" placeholder="{{ __( 'Order comment here' ) }} ..." required></textarea>
                 @if ($errors->has('comment'))
                     <span class="invalid-feedback" role="alert">
@@ -44,7 +44,7 @@
                 @endif
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-primary my-4" id="save-ratings">{{ __('Save') }}</button>
+                <button type="submit" class="btn btn-primary my-4" id="save-ratings">{{ __('qrlanding.save') }}</button>
             </div>
         </section>
     </form>
