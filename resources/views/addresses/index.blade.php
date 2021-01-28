@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => __('My Addresses')])
+@extends('layouts.app', ['title' => __('qrlanding.my-addresses')])
 
 @section('content')
     @include('addresses.partials.modals')
@@ -12,7 +12,7 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">{{ __('My Addresses') }}</h3>
+                                <h3 class="mb-0">{{ __('qrlanding.my-addresses') }}</h3>
                             </div>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">{{ __('Address') }}</th>
+                                    <th scope="col">{{ __('qrlanding.address') }}</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
