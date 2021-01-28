@@ -1,7 +1,7 @@
 <div class="card card-profile shadow">
     <div class="px-4">
       <div class="mt-5">
-        <h3>{{ __('Delivery Address') }}<span class="font-weight-light"></span></h3>
+        <h3>{{ __('qrlanding.delivery-address') }}<span class="font-weight-light"></span></h3>
       </div>
       <div class="card-content border-top">
         <br />
@@ -28,7 +28,7 @@
             @endif
         </div>
         <div class="form-group">
-            <button type="button" data-toggle="modal" data-target="#modal-order-new-address"  class="btn btn-outline-success">{{ __('Add new') }}</button>
+            <button type="button" data-toggle="modal" data-target="#modal-order-new-address"  class="btn btn-outline-success">{{ __('qrlanding.add-new') }}</button>
         </div>
         <input type="hidden" name="deliveryCost" id="deliveryCost" value="0" />
       </div>
