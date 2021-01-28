@@ -44,7 +44,7 @@
                         @if (!env('HIDE_COD',false))
                             <div class="custom-control custom-radio mb-3">
                                 <input name="paymentType" class="custom-control-input" id="cashOnDelivery" type="radio" value="cod" {{ env('DEFAULT_PAYMENT','cod')=="cod"?"checked":""}}>
-                                <label class="custom-control-label" for="cashOnDelivery"><span class="delTime">{{ config('app.isqrsaas')?__('Cash / Card Terminal'): __('Cash on delivery') }}</span> <span class="picTime">{{ __('Cash on pickup') }}</span></label>
+                                <label class="custom-control-label" for="cashOnDelivery"><span class="delTime">{{ config('app.isqrsaas')?__('qrlanding.cash-card-terminal'): __('Cash on delivery') }}</span> <span class="picTime">{{ __('Cash on pickup') }}</span></label>
                             </div>
                         @endif
 
@@ -116,11 +116,11 @@
 
         @elseif(env('IS_WHATSAPP_ORDERING_MODE',false) || env('WHATSAPP_ORDERING_ENABLED',false))
             <div class="text-center">
-                <button type="submit" class="btn btn-success mt-4 paymentbutton submit_btn">{{ __('Send Whatsapp Order') }}</button>
+                <button type="submit" class="btn btn-success mt-4 paymentbutton submit_btn">{{ __('qrlanding-send-whatsapp-order') }}</button>
             </div>
         @elseif(env('IS_FACEBOOK_ORDERING_MODE',false) || env('ENABLE_FACEBOOK_ORDERING',false))
             <div class="text-center">
-                <button type="button" id="fborder_btn" class="btn btn-success mt-4 paymentbutton">{{ __('Send Facebook Order') }}</button>
+                <button type="button" id="fborder_btn" class="btn btn-success mt-4 paymentbutton">{{ __('qrlanding-send-facebook-order') }}</button>
             </div>
         @endif
         <!-- END Payment Actions -->
@@ -129,7 +129,7 @@
         <div class="text-center">
             <div class="custom-control custom-checkbox mb-3">
                 <input class="custom-control-input" id="privacypolicy" type="checkbox">
-                <label class="custom-control-label" for="privacypolicy">{{ __('I agree to the Terms and Conditions and Privacy Policy') }}</label>
+                <label class="custom-control-label" for="privacypolicy">{{ __('qrlanding.i-agree-to-the-terms-and-conditions-and-privacy-policy') }}</label>
             </div>
         </div>
 
