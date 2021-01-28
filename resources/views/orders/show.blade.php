@@ -27,7 +27,7 @@
                 <br/>
                 <div class="card card-profile shadow">
                     <div class="card-header">
-                        <h5 class="h3 mb-0">{{ __("Order tracking")}}</h5>
+                        <h5 class="h3 mb-0">{{ __("qrlanding.order-tracking")}}</h5>
                     </div>
                     <div class="card-body">
                         @include('orders.partials.map',['order'=>$order])
@@ -37,7 +37,7 @@
                 <br/>
                 <div class="card card-profile shadow">
                     <div class="card-header">
-                        <h5 class="h3 mb-0">{{ __("Status History")}}</h5>
+                        <h5 class="h3 mb-0">{{ __("qrlanding.status-history")}}</h5>
                     </div>
                     @include('orders.partials.orderstatus')
                     
