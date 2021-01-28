@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => __('Banner')])
+@extends('layouts.app', ['title' => __('qrlanding.banner')])
 
 @section('content')
 <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -17,12 +17,12 @@
                             @endif
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('admin.restaurant.banners.index') }}" class="btn btn-sm btn-primary">{{ __('Back') }}</a>
+                            <a href="{{ route('admin.restaurant.banners.index') }}" class="btn btn-sm btn-primary">{{ __('qrlanding.back') }}</a>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <h6 class="heading-small text-muted mb-4">{{ __('Banner information') }}</h6>
+                    <h6 class="heading-small text-muted mb-4">{{ __('qrlanding.banner-information') }}</h6>
                     @if (session('status'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         {{ session('status') }}
@@ -43,9 +43,9 @@
                             @include('banners.form', ['restaurants' => $restaurants])
                             <div>
                                 @if(isset($banner))
-                                    <button type="submit" class="btn btn-primary mt-4">{{ __('Update')}}</button>
+                                    <button type="submit" class="btn btn-primary mt-4">{{ __('qrlanding.update')}}</button>
                                 @else
-                                    <button type="submit" class="btn btn-success mt-4">{{ __('Save') }}</button>
+                                    <button type="submit" class="btn btn-success mt-4">{{ __('qrlanding.save') }}</button>
                                 @endif
                             </div>
                         </form>
