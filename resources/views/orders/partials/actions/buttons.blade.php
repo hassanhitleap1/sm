@@ -12,15 +12,15 @@ $lastStatusAlisas=$order->status->pluck('alias')->last();
             }
         </script>
         @if($lastStatusAlisas == "just_created")
-            <a href="{{ url('updatestatus/accepted_by_admin/'.$order->id) }}" class="btn btn-primary">{{ __('Accept') }}</a>
-            <a href="{{ url('updatestatus/rejected_by_admin/'.$order->id) }}" class="btn btn-danger">{{ __('Reject') }}</a>
+            <a href="{{ url('updatestatus/accepted_by_admin/'.$order->id) }}" class="btn btn-primary">{{ __('qrlanding.accept') }}</a>
+            <a href="{{ url('updatestatus/rejected_by_admin/'.$order->id) }}" class="btn btn-danger">{{ __('qrlanding.reject') }}</a>
         
         @elseif($lastStatusAlisas == "accepted_by_restaurant"&&$order->delivery_method.""!="2")
-            <button type="button" class="btn btn-primary" onClick=(setSelectedOrderId({{ $order->id }}))  data-toggle="modal" data-target="#modal-asign-driver">{{ __('Assign to driver') }}</button>
+            <button type="button" class="btn btn-primary" onClick=(setSelectedOrderId({{ $order->id }}))  data-toggle="modal" data-target="#modal-asign-driver">{{ __('qrlanding.assign-to-driver') }}</button>
         @elseif($lastStatusAlisas == "rejected_by_driver"&&$order->delivery_method.""!="2")
-            <button type="button" class="btn btn-primary" onClick=(setSelectedOrderId({{ $order->id }}))  data-toggle="modal" data-target="#modal-asign-driver">{{ __('Assign to driver') }}</button>
+            <button type="button" class="btn btn-primary" onClick=(setSelectedOrderId({{ $order->id }}))  data-toggle="modal" data-target="#modal-asign-driver">{{ __('qrlanding.assign-to-driver') }}</button>
         @elseif($lastStatusAlisas == "prepared"&&$order->delivery_method.""!="2"&&$order->driver==null)
-            <button type="button" class="btn btn-primary" onClick=(setSelectedOrderId({{ $order->id }}))  data-toggle="modal" data-target="#modal-asign-driver">{{ __('Assign to driver') }}</button>
+            <button type="button" class="btn btn-primary" onClick=(setSelectedOrderId({{ $order->id }}))  data-toggle="modal" data-target="#modal-asign-driver">{{ __('qrlanding.assign-to-driver') }}</button>
         @else
             <p>{{ __('No actions for you right now!') }}</p>
        @endif
@@ -28,35 +28,35 @@ $lastStatusAlisas=$order->status->pluck('alias')->last();
     @role('owner')
         @if(config('app.isft'))
             @if($lastStatusAlisas == "accepted_by_admin")
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-time-to-prepare">{{ __('Accept') }}</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-time-to-prepare">{{ __('qrlanding.accept') }}</button>
                 <a href="{{ url('updatestatus/rejected_by_restaurant/'.$order->id) }}" class="btn btn-danger">{{ __('Reject') }}</a>
             @elseif($lastStatusAlisas == "assigned_to_driver"||$lastStatusAlisas == "accepted_by_restaurant"||$lastStatusAlisas == "accepted_by_driver"||$lastStatusAlisas == "rejected_by_restaurant")
-                <a href="{{ url('updatestatus/prepared/'.$order->id) }}" class="btn btn-primary">{{ __('Prepared') }}</a>
+                <a href="{{ url('updatestatus/prepared/'.$order->id) }}" class="btn btn-primary">{{ __('qrlanding.prepared') }}</a>
             @elseif($lastStatusAlisas == "accepted_by_restaurant")
-                <a href="{{ url('updatestatus/prepared/'.$order->id) }}" class="btn btn-primary">{{ __('Prepared') }}</a>
+                <a href="{{ url('updatestatus/prepared/'.$order->id) }}" class="btn btn-primary">{{ __('qrlanding.prepared') }}</a>
             @elseif(config('app.allow_self_deliver')&&$lastStatusAlisas == "prepared")
-                <a href="{{ url('updatestatus/delivered/'.$order->id) }}" class="btn btn-primary">{{ __('Delivered') }}</a>
+                <a href="{{ url('updatestatus/delivered/'.$order->id) }}" class="btn btn-primary">{{ __('qrlanding.delivered') }}</a>
             @elseif($lastStatusAlisas == "prepared"&&$order->delivery_method.""=="2")
-                <a href="{{ url('updatestatus/delivered/'.$order->id) }}" class="btn btn-primary">{{ __('Delivered') }}</a>
+                <a href="{{ url('updatestatus/delivered/'.$order->id) }}" class="btn btn-primary">{{ __('qrlanding.delivered') }}</a>
             @else
                 <p>{{ __('No actions for you right now!') }}</p>
             @endif
         @else
         
             @if($lastStatusAlisas == "just_created")
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-time-to-prepare">{{ __('Accept') }}</button>
-                <a href="{{ url('updatestatus/rejected_by_restaurant/'.$order->id) }}" class="btn btn-danger">{{ __('Reject') }}</a>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-time-to-prepare">{{ __('qrlanding.accept') }}</button>
+                <a href="{{ url('updatestatus/rejected_by_restaurant/'.$order->id) }}" class="btn btn-danger">{{ __('qrlanding.reject') }}</a>
             @elseif($lastStatusAlisas == "accepted_by_restaurant")
-                <a href="{{ url('updatestatus/prepared/'.$order->id) }}" class="btn btn-primary">{{ __('Prepared') }}</a>
+                <a href="{{ url('updatestatus/prepared/'.$order->id) }}" class="btn btn-primary">{{ __('qrlanding.prepared') }}</a>
             @elseif($lastStatusAlisas == "prepared")
-                <a href="{{ url('updatestatus/delivered/'.$order->id) }}" class="btn btn-primary">{{ __('Delivered') }}</a>
+                <a href="{{ url('updatestatus/delivered/'.$order->id) }}" class="btn btn-primary">{{ __('qrlanding.delivered') }}</a>
             @elseif($lastStatusAlisas == "delivered")
-                <a href="{{ url('updatestatus/closed/'.$order->id) }}" class="btn btn-danger">{{ __('Close') }}</a>
+                <a href="{{ url('updatestatus/closed/'.$order->id) }}" class="btn btn-danger">{{ __('qrlanding.close') }}</a>
             @elseif($lastStatusAlisas == "updated")
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-time-to-prepare">{{ __('Accept') }}</button>
-                <a href="{{ url('updatestatus/rejected_by_restaurant/'.$order->id) }}" class="btn btn-danger">{{ __('Reject') }}</a>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-time-to-prepare">{{ __('qrlanding.accept') }}</button>
+                <a href="{{ url('updatestatus/rejected_by_restaurant/'.$order->id) }}" class="btn btn-danger">{{ __('qrlanding.reject') }}</a>
             @else
-                <p>{{ __('No actions for you right now!') }}</p>
+                <p>{{ __('qrlanding.no-actions-for-you-right-now') }}</p>
             @endif
 
         @endif
@@ -64,11 +64,11 @@ $lastStatusAlisas=$order->status->pluck('alias')->last();
     @endrole
     @role('driver')
         @if($lastStatusAlisas == "prepared")
-            <a href="{{ url('updatestatus/picked_up/'.$order->id) }}" class="btn btn-primary">{{ __('Picked Up') }}</a>
+            <a href="{{ url('updatestatus/picked_up/'.$order->id) }}" class="btn btn-primary">{{ __('qrlanding.picked-up') }}</a>
         @elseif($lastStatusAlisas == "picked_up")
-            <a href="{{ url('updatestatus/delivered/'.$order->id) }}" class="btn btn-primary">{{ __('Delivered') }}</a>
+            <a href="{{ url('updatestatus/delivered/'.$order->id) }}" class="btn btn-primary">{{ __('qrlanding.delivered') }}</a>
         @else
-            <p>{{ __('No actions for you right now!') }}</p>
+            <p>{{ __('qrlanding.no-actions-for-you-right-now') }}</p>
         @endif
     @endrole
     </nav>
