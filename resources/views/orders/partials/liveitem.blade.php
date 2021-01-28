@@ -10,6 +10,6 @@
         <small>@{{ item.price }}</small><br />
     </div>
     <div class="col-auto">
-        <a class="btn btn-sm btn-primary" :href="item.link">{{ __('Details')}}</a>
+        <a class="btn btn-sm btn-primary" :href="item.link">{{ __('qrlanding.details')}}</a>
     </div>
   </div>
