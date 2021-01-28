@@ -12,20 +12,20 @@
                     <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);"></div>
                     <div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);"></div>
                 </div>
-                <h2 class="display-2">{{ __("You're all set!") }}</h2>
+                <h2 class="display-2">{{ __("qrlanding.youre-all-set") }}</h2>
                 <h1 class="mb-4">
-                    <span class="badge badge-primary">{{ __('Order')." #".$order->id }}</span>
+                    <span class="badge badge-primary">{{ __('qrlanding.order')." #".$order->id }}</span>
                 </h1>
                 <div class="d-flex justify-content-center">
                     <div class="col-8">
                         <h5 class="mt-0 mb-5 heading-small text-muted">
                             {{ __('Your order is created. You will be notified for further information.' )}}
                         </h5>
-                        <div class="font-weight-300 mb-5">{{ __('Thanks for your purchase').", " }}<span class="h3">{{ $order->restorant->name }}</span></div>
+                        <div class="font-weight-300 mb-5">{{ __('qrlanding.thanks-for-your-purchase').", " }}<span class="h3">{{ $order->restorant->name }}</span></div>
                         @if (env('WILDCARD_DOMAIN_READY',false))
                             <a href="{{ (isset($_SERVER['HTTPS'])&&$_SERVER["HTTPS"] ?"https://":"http://").$order->restorant->subdomain.".".str_replace("www.","",$_SERVER['HTTP_HOST']) }}" class="btn btn-outline-primary btn-sm">{{ __('Go back to restaurant') }}</a>
                         @else
-                            <a href="{{ route('vendor',$order->restorant->subdomain) }}" class="btn btn-outline-primary btn-sm">{{ __('Go back to restaurant') }}</a>
+                            <a href="{{ route('vendor',$order->restorant->subdomain) }}" class="btn btn-outline-primary btn-sm">{{ __('qrlanding.go-back-to-restaurant') }}</a>
                         @endif
                     </div>
                 </div>
