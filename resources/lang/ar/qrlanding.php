@@ -98,4 +98,5 @@ return array (
   "done"=>"تم",
   "date-from"=>"التاريخ من",
   "date-to"=>"التاريخ الى",
+    "salesvalue"="قيمة المبيعات",
 );
