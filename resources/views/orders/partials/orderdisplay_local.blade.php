@@ -4,12 +4,12 @@
         @hasrole('admin')
             <th scope="col">{{ __('Restaurant') }}</th>
         @endhasrole
-        <th class="table-web" scope="col">{{ __('Created') }}</th>
-        <th class="table-web" scope="col">{{ __('Table / Method') }}</th>
-        <th class="table-web" scope="col">{{ __('Items') }}</th>
-        <th class="table-web" scope="col">{{ __('Price') }}</th>
-        <th scope="col">{{ __('Last status') }}</th>
-        <th scope="col">{{ __('Actions') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.created') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.table-Method') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.items') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.price') }}</th>
+        <th scope="col">{{ __('qrlanding.last-status') }}</th>
+        <th scope="col">{{ __('qrlanding.actions') }}</th>
     </tr>
 </thead>
 <tbody>
@@ -39,7 +39,7 @@
         @if( $order->table)
             {{  $order->table->restoarea?$order->table->restoarea->name." - ".$order->table->name:$order->table->name }}
         @else
-            {{ __('Takeaway')}}
+            {{ __('qrlanding.takeaway')}}
         @endif
     </td>
     <td class="table-web">
