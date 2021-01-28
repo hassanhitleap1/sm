@@ -43,7 +43,7 @@
                             <!-- Card header -->
                             <div class="card-header">
                             <!-- Title -->
-                                <h5 class="h3 mb-0"><?php echo e(__("Status History")); ?></h5>
+                                <h5 class="h3 mb-0"><?php echo e(__("qrlanding.status-history")); ?></h5>
                             </div>
                             <!-- Card body -->
                             <div class="card-body">
@@ -63,7 +63,7 @@
     <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="modal-title-new-item"><?php echo e(__('Your overall rating')); ?></h3>
+                <h3 class="modal-title" id="modal-title-new-item"><?php echo e(__('qrlanding.your-overall-rating')); ?></h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -103,7 +103,7 @@
                             <div class='clearfix'></div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary my-4" id="save-ratings"><?php echo e(__('Save')); ?></button>
+                            <button type="submit" class="btn btn-primary my-4" id="save-ratings"><?php echo e(__('qrlanding.save')); ?></button>
                         </div>
                         </section>
                         </form>
@@ -117,7 +117,7 @@
     <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="modal-title-new-item"><?php echo e(__('Order time to prepare in minutes')); ?></h3>
+                <h3 class="modal-title" id="modal-title-new-item"><?php echo e(__('qrlanding.order-time-to-prepare-in-minutes')); ?></h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -133,7 +133,7 @@
                             <?php endfor; ?>
                         </div>
                         <div class="text-center">
-                            <button type="submit" id="btn-submit-time-prepare" class="btn btn-primary my-4" id="save-ratings"><?php echo e(__('Save')); ?></button>
+                            <button type="submit" id="btn-submit-time-prepare" class="btn btn-primary my-4" id="save-ratings"><?php echo e(__('qrlanding.save')); ?></button>
                         </div>
                     </form>
                     </div>

@@ -9,7 +9,7 @@
                 <div class="card bg-secondary shadow">
                     <div class="card-header bg-white border-0">
                         <div class="row align-items-center">
-                            <h3 class="col-12 mb-0"><?php echo e(__('Edit Profile')); ?></h3>
+                            <h3 class="col-12 mb-0"><?php echo e(__('qrlanding.edit-profile')); ?></h3>
                         </div>
                     </div>
                     <div class="card-body">
@@ -17,7 +17,7 @@
                             <?php echo csrf_field(); ?>
                             <?php echo method_field('put'); ?>
 
-                            <h6 class="heading-small text-muted mb-4"><?php echo e(__('User information')); ?></h6>
+                            <h6 class="heading-small text-muted mb-4"><?php echo e(__('qrlanding.user=information')); ?></h6>
 
                             <?php if(session('status')): ?>
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -62,7 +62,7 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-success mt-4"><?php echo e(__('Save')); ?></button>
+                                    <button type="submit" class="btn btn-success mt-4"><?php echo e(__('qrlanding.save')); ?></button>
                                 </div>
                             </div>
                         </form>
@@ -71,7 +71,7 @@
                             <?php echo csrf_field(); ?>
                             <?php echo method_field('put'); ?>
 
-                            <h6 class="heading-small text-muted mb-4"><?php echo e(__('Password')); ?></h6>
+                            <h6 class="heading-small text-muted mb-4"><?php echo e(__('qrlanding.password')); ?></h6>
 
                             <?php if(session('password_status')): ?>
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -85,7 +85,7 @@
 
                             <div class="pl-lg-4">
                                 <div class="form-group<?php echo e($errors->has('old_password') ? ' has-danger' : ''); ?>">
-                                    <label class="form-control-label" for="input-current-password"><?php echo e(__('Current Password')); ?></label>
+                                    <label class="form-control-label" for="input-current-password"><?php echo e(__('qrlanding.current-password')); ?></label>
                                     <input type="password" name="old_password" id="input-current-password" class="form-control form-control-alternative<?php echo e($errors->has('old_password') ? ' is-invalid' : ''); ?>" placeholder="<?php echo e(__('Current Password')); ?>" value="" required>
 
                                     <?php if($errors->has('old_password')): ?>
@@ -105,12 +105,12 @@
                                     <?php endif; ?>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-password-confirmation"><?php echo e(__('Confirm New Password')); ?></label>
+                                    <label class="form-control-label" for="input-password-confirmation"><?php echo e(__('qrlanding.confirm-new-password')); ?></label>
                                     <input type="password" name="password_confirmation" id="input-password-confirmation" class="form-control form-control-alternative" placeholder="<?php echo e(__('Confirm New Password')); ?>" value="" required>
                                 </div>
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-success mt-4"><?php echo e(__('Change password')); ?></button>
+                                    <button type="submit" class="btn btn-success mt-4"><?php echo e(__('qrlanding.change-password')); ?></button>
                                 </div>
                             </div>
                         </form>
@@ -122,7 +122,7 @@
                                     <?php echo csrf_field(); ?>
                                     <?php echo method_field('delete'); ?>
                                     <button id="close_acc_btn" type="button" class="btn btn-danger mt-4">
-                                        <i id="loadbtn" class="fa fa-spinner fa-spin"></i> &nbsp;<?php echo e(__('Close Account')); ?>
+                                        <i id="loadbtn" class="fa fa-spinner fa-spin"></i> &nbsp;<?php echo e(__('qrlanding.close-account')); ?>
 
                                     </button>
                                 </form>
@@ -152,4 +152,4 @@
     </script>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.app', ['title' => __('User Profile')], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\restaurant-menus\resources\views/profile/edit.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', ['title' => __('qrlanding.user-profile')], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\restaurant-menus\resources\views/profile/edit.blade.php ENDPATH**/ ?>

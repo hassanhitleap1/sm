@@ -1,15 +1,15 @@
 <thead class="thead-light">
     <tr>
-        <th scope="col"><?php echo e(__('ID')); ?></th>
+        <th scope="col"><?php echo e(__('qrlanding.ID')); ?></th>
         <?php if(auth()->check() && auth()->user()->hasRole('admin')): ?>
-            <th scope="col"><?php echo e(__('Restaurant')); ?></th>
+            <th scope="col"><?php echo e(__('qrlanding.restaurant')); ?></th>
         <?php endif; ?>
-        <th class="table-web" scope="col"><?php echo e(__('Created')); ?></th>
-        <th class="table-web" scope="col"><?php echo e(__('Table / Method')); ?></th>
-        <th class="table-web" scope="col"><?php echo e(__('Items')); ?></th>
-        <th class="table-web" scope="col"><?php echo e(__('Price')); ?></th>
-        <th scope="col"><?php echo e(__('Last status')); ?></th>
-        <th scope="col"><?php echo e(__('Actions')); ?></th>
+        <th class="table-web" scope="col"><?php echo e(__('qrlanding.created')); ?></th>
+        <th class="table-web" scope="col"><?php echo e(__('qrlanding.table-Method')); ?></th>
+        <th class="table-web" scope="col"><?php echo e(__('qrlanding.items')); ?></th>
+        <th class="table-web" scope="col"><?php echo e(__('qrlanding.price')); ?></th>
+        <th scope="col"><?php echo e(__('qrlanding.last-status')); ?></th>
+        <th scope="col"><?php echo e(__('qrlanding.actions')); ?></th>
     </tr>
 </thead>
 <tbody>
@@ -41,7 +41,7 @@
             <?php echo e($order->table->restoarea?$order->table->restoarea->name." - ".$order->table->name:$order->table->name); ?>
 
         <?php else: ?>
-            <?php echo e(__('Takeaway')); ?>
+            <?php echo e(__('qrlanding.takeaway')); ?>
 
         <?php endif; ?>
     </td>

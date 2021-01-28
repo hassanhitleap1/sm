@@ -22,7 +22,7 @@
         <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="modal-title-new-item"><?php echo e(__('Assign Driver')); ?></h3>
+                    <h3 class="modal-title" id="modal-title-new-item"><?php echo e(__('qrlanding.assign-driver')); ?></h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
@@ -33,7 +33,7 @@
                             <form id="form-assing-driver" method="GET" action="">
                                 <?php echo $__env->make('partials.fields',$fields, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary my-4"><?php echo e(__('Save')); ?></button>
+                                    <button type="submit" class="btn btn-primary my-4"><?php echo e(__('qrlanding.save')); ?></button>
                                 </div>
                             </form>
                         </div>

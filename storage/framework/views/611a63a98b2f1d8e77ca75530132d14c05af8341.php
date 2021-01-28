@@ -58,10 +58,10 @@
                         <?php if(auth()->check() && auth()->user()->hasRole('admin|owner')): ?>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="form-control-label" for="client"><?php echo e(__('Filter by Client')); ?></label>
+                                <label class="form-control-label" for="client"><?php echo e(__('qrlanding.filter-by-client')); ?></label>
 
                                 <select class="form-control select2" id="blabla" name="client_id">
-                                    <option disabled selected value> -- <?php echo e(__('Select an option')); ?> -- </option>
+                                    <option disabled selected value> -- <?php echo e(__('qrlanding.select-an-option')); ?> -- </option>
                                     <?php $__currentLoopData = $clients; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $client): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <option  <?php if(isset($_GET['client_id'])&&$_GET['client_id'].""==$client->id.""){echo "selected";} ?>  value="<?php echo e($client->id); ?>"><?php echo e($client->name); ?></option>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -74,7 +74,7 @@
                             <div class="form-group">
                                 <label class="form-control-label" for="driver"><?php echo e(__('Filter by Driver')); ?></label>
                                 <select class="form-control select2" name="driver_id">
-                                    <option disabled selected value> -- <?php echo e(__('Select an option')); ?> -- </option>
+                                    <option disabled selected value> -- <?php echo e(__('qrlanding.select-an-option')); ?> -- </option>
                                     <?php $__currentLoopData = $drivers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $driver): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <option <?php if(isset($_GET['driver_id'])&&$_GET['driver_id'].""==$driver->id.""){echo "selected";} ?>   value="<?php echo e($driver->id); ?>"><?php echo e($driver->name); ?></option>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -91,17 +91,17 @@
                             <div class="row">
                                 <?php if($parameters): ?>
                                     <div class="col-md-4">
-                                        <a href="<?php echo e(Request::url()); ?>" class="btn btn-md btn-block"><?php echo e(__('Clear Filters')); ?></a>
+                                        <a href="<?php echo e(Request::url()); ?>" class="btn btn-md btn-block"><?php echo e(__('qrlanding.clear-filters')); ?></a>
                                     </div>
                                     <div class="col-md-4">
-                                    <a href="<?php echo e(Request::fullUrl()."&report=true"); ?>" class="btn btn-md btn-success btn-block"><?php echo e(__('Download report')); ?></a>
+                                    <a href="<?php echo e(Request::fullUrl()."&report=true"); ?>" class="btn btn-md btn-success btn-block"><?php echo e(__('qrlanding.download-report')); ?></a>
                                     </div>
                                 <?php else: ?>
                                     <div class="col-md-8"></div>
                                 <?php endif; ?>
 
                                 <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary btn-md btn-block"><?php echo e(__('Filter')); ?></button>
+                                    <button type="submit" class="btn btn-primary btn-md btn-block"><?php echo e(__('qrlanding.filter')); ?></button>
                                 </div>
                         </div>
                     </div>
@@ -132,7 +132,8 @@
 
         </nav>
         <?php else: ?>
-            <h4><?php echo e(__('You don`t have any orders')); ?> ...</h4>
+            <h4><?php echo e(__('qrlanding.you-dont-have-any-orders')); ?> ...</h4>
         <?php endif; ?>
     </div>
-</div><?php /**PATH C:\xampp\htdocs\restaurant-menus\resources\views/orders/partials/ordercard.blade.php ENDPATH**/ ?>
+</div>
+<?php /**PATH C:\xampp\htdocs\restaurant-menus\resources\views/orders/partials/ordercard.blade.php ENDPATH**/ ?>

@@ -98,8 +98,15 @@ return array (
   "done"=>"تم",
   "date-from"=>"التاريخ من",
   "date-to"=>"التاريخ الى",
-    "salesvalue"="قيمة المبيعات",
-    "your-comment-here"="اترك تعليق  هنا",
+    "salesvalue"=>"قيمة المبيعات",
+    "your-comment-here"=>"اترك تعليق  هنا",
     "comment"=>"تعليق",
+    "clear-filters"=>"مسح الفلاتر",
+    "filter"=>"فلتر",
+    "download-report"=>"تحميل التقارير",
+    "ID"=>"الرقم",
+    "created"=>"المنشأ",
+    "table-method"=>"طريقة الجدول",
+    "items"=>"العناصر",
     
 );

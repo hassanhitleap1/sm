@@ -1,5 +1,5 @@
 <?php $__env->startSection('admin_title'); ?>
-    <?php echo e(__('Dashboard')); ?>
+    <?php echo e(__('qrlanding.dashboard')); ?>
 
 <?php $__env->stopSection(); ?>
 
@@ -30,7 +30,7 @@
                         <div class="row align-items-center">
                             <div class="col">
                                 <h6 class="text-uppercase text-light ls-1 mb-1"><?php echo e(__('Overview')); ?></h6>
-                                <h2 class="text-white mb-0"><?php echo e(__('Sales value')); ?></h2>
+                                <h2 class="text-white mb-0"><?php echo e(__('qrlanding.salesvalue')); ?></h2>
                             </div>
 
                         </div>

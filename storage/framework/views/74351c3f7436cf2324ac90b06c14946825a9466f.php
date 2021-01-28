@@ -10,7 +10,7 @@
         <small>{{ item.price }}</small><br />
     </div>
     <div class="col-auto">
-        <a class="btn btn-sm btn-primary" :href="item.link"><?php echo e(__('Details')); ?></a>
+        <a class="btn btn-sm btn-primary" :href="item.link"><?php echo e(__('qrlanding.details')); ?></a>
     </div>
   </div>
 <?php /**PATH C:\xampp\htdocs\restaurant-menus\resources\views/orders/partials/liveitem.blade.php ENDPATH**/ ?>
