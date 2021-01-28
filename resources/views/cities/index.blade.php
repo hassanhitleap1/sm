@@ -1,8 +1,8 @@
 @extends('general.index', $setup);
 @section('thead')
-    <th>{{ __('Name') }}</th>
-    <th>{{ __('Short name') }}</th>
-    <th>{{ __('Actions') }}</th>
+    <th>{{ __('qrlanding.name') }}</th>
+    <th>{{ __('qrlanding.short-name') }}</th>
+    <th>{{ __('qrlanding.actions') }}</th>
 @endsection
 @section('tbody')
 @foreach ($setup['items'] as $item)
