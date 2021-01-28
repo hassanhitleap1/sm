@@ -99,4 +99,7 @@ return array (
   "date-from"=>"التاريخ من",
   "date-to"=>"التاريخ الى",
     "salesvalue"="قيمة المبيعات",
+    "your-comment-here"="اترك تعليق  هنا",
+    "comment"=>"تعليق",
+    
 );
