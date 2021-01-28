@@ -15,13 +15,13 @@
                         <div class="col-sm-8 align-items-start">
                             <a  href="{{ $backUrl }}" type="button" class="btn btn-primary btn-lg left text-white">
                                 <span class="btn-inner--icon"><i class="fa fa-chevron-left"></i></span>
-                                <span class="btn-inner--text">{{ __('Go Back')}}</span>
+                                <span class="btn-inner--text">{{ __('qrlanding.go-back')}}</span>
                             </a>
                         </div>
                         <div class="col-sm-4" style=" display: flex; justify-content: flex-end">
                             <a  href="{{ url()->current() }}" type="button" class="btn btn-primary btn-lg align-items-right text-white">
                                 <span class="btn-inner--icon"><i class="fa fa-refresh"></i></span>
-                                <span class="btn-inner--text">{{ __('Refresh')}}</span>
+                                <span class="btn-inner--text">{{ __('qrlanding.refresh')}}</span>
                             </a>
                         </div>
                         
