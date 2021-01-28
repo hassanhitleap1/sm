@@ -58,10 +58,10 @@
                         @hasrole('admin|owner')
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="form-control-label" for="client">{{ __('Filter by Client') }}</label>
+                                <label class="form-control-label" for="client">{{ __('qrlanding.filter-by-client') }}</label>
 
                                 <select class="form-control select2" id="blabla" name="client_id">
-                                    <option disabled selected value> -- {{ __('Select an option') }} -- </option>
+                                    <option disabled selected value> -- {{ __('qrlanding.select-an-option') }} -- </option>
                                     @foreach ($clients as $client)
                                         <option  <?php if(isset($_GET['client_id'])&&$_GET['client_id'].""==$client->id.""){echo "selected";} ?>  value="{{ $client->id }}">{{$client->name}}</option>
                                     @endforeach
@@ -74,7 +74,7 @@
                             <div class="form-group">
                                 <label class="form-control-label" for="driver">{{ __('Filter by Driver') }}</label>
                                 <select class="form-control select2" name="driver_id">
-                                    <option disabled selected value> -- {{ __('Select an option') }} -- </option>
+                                    <option disabled selected value> -- {{ __('qrlanding.select-an-option')  }} -- </option>
                                     @foreach ($drivers as $driver)
                                         <option <?php if(isset($_GET['driver_id'])&&$_GET['driver_id'].""==$driver->id.""){echo "selected";} ?>   value="{{ $driver->id }}">{{$driver->name}}</option>
                                     @endforeach
@@ -91,17 +91,17 @@
                             <div class="row">
                                 @if ($parameters)
                                     <div class="col-md-4">
-                                        <a href="{{ Request::url() }}" class="btn btn-md btn-block">{{ __('Clear Filters') }}</a>
+                                        <a href="{{ Request::url() }}" class="btn btn-md btn-block">{{ __('qrlanding.clear-filters') }}</a>
                                     </div>
                                     <div class="col-md-4">
-                                    <a href="{{Request::fullUrl()."&report=true" }}" class="btn btn-md btn-success btn-block">{{ __('Download report') }}</a>
+                                    <a href="{{Request::fullUrl()."&report=true" }}" class="btn btn-md btn-success btn-block">{{ __('qrlanding.download-report') }}</a>
                                     </div>
                                 @else
                                     <div class="col-md-8"></div>
                                 @endif
 
                                 <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary btn-md btn-block">{{ __('Filter') }}</button>
+                                    <button type="submit" class="btn btn-primary btn-md btn-block">{{ __('qrlanding.filter') }}</button>
                                 </div>
                         </div>
                     </div>
@@ -131,7 +131,7 @@
             {{ $orders->appends(Request::all())->links() }}
         </nav>
         @else
-            <h4>{{ __('You don`t have any orders') }} ...</h4>
+            <h4>{{ __('qrlanding.you-dont-have-any-orders') }} ...</h4>
         @endif
     </div>
 </div>
