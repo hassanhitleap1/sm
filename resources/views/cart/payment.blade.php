@@ -1,7 +1,7 @@
 <div class="card card-profile shadow mt--300">
     <div class="px-4">
       <div class="mt-5">
-        <h3>{{ __('Checkout') }}<span class="font-weight-light"></span></h3>
+        <h3>{{ __('qrlanding.checkout') }}<span class="font-weight-light"></span></h3>
       </div>
       <div  class="border-top">
         <!-- Price overview -->
@@ -10,16 +10,16 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
-                            <span v-if="totalPrice==0">{{ __('Cart is empty') }}!</span>
+                            <span v-if="totalPrice==0">{{ __('qrlanding.cart-is-empty') }}!</span>
 
-                            <span v-if="totalPrice"><strong>{{ __('Subtotal') }}:</strong></span>
+                            <span v-if="totalPrice"><strong>{{ __('qrlanding.subtotal') }}:</strong></span>
                             <span v-if="totalPrice" class="ammount"><strong>@{{ totalPriceFormat }}</strong></span>
                             @if(config('app.isft'))
-                                <span v-if="totalPrice&&delivery"><br /><strong>{{ __('Delivery') }}:</strong></span>
+                                <span v-if="totalPrice&&delivery"><br /><strong>{{ __('qrlanding.delivery') }}:</strong></span>
                                 <span v-if="totalPrice&&delivery" class="ammount"><strong>@{{ deliveryPriceFormated }}</strong></span><br />
                             @endif
                             <br />
-                            <span v-if="totalPrice"><strong>{{ __('TOTAL') }}:</strong></span>
+                            <span v-if="totalPrice"><strong>{{ __('qrlanding.total') }}:</strong></span>
                             <span v-if="totalPrice" class="ammount"><strong>@{{ withDeliveryFormat   }}</strong></span>
                             <input v-if="totalPrice" type="hidden" id="tootalPricewithDeliveryRaw" :value="withDelivery" />
                         </div>
@@ -76,7 +76,7 @@
                         @if(env('ENABLE_MOLLIE', false))
                             <div class="custom-control custom-radio mb-3">
                                 <input name="paymentType" class="custom-control-input" id="paymentMollie" type="radio" value="mollie" {{ env('DEFAULT_PAYMENT','cod')=="mollie"?"checked":""}}>
-                                <label class="custom-control-label" for="paymentMollie">{{ __('Pay with Mollie') }}</label>
+                                <label class="custom-control-label" for="paymentMollie">{{ __('qrlanding.pay-with-mollie') }}</label>
                             </div>
                         @endif
 
