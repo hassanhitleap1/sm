@@ -1,7 +1,7 @@
 <div class="card card-profile shadow">
     <div class="px-4">
       <div class="mt-5">
-        <h3><span class="delTime delTimeTS">{{ __('Delivery time') }}</span><span class="picTime picTimeTS">{{ __('Pickup time') }}</span><span class="font-weight-light"></span></h3>
+        <h3><span class="delTime delTimeTS">{{ __('qrlanding.delivery-time') }}</span><span class="picTime picTimeTS">{{ __('qrlanding.pickup-time') }}</span><span class="font-weight-light"></span></h3>
       </div>
       <div class="card-content border-top">
         <br />
