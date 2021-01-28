@@ -1,7 +1,7 @@
 <div class="card card-profile shadow">
     <div class="px-4">
       <div class="mt-5">
-        <h3>{{ __('Demo cards') }}<span class="font-weight-light small">- This is only shown in demo</span></h3>
+        <h3>{{ __('qrlanding.demo-cards') }}<span class="font-weight-light small">- This is only shown in demo</span></h3>
       </div>
       <div  class="border-top">
         <br/>
