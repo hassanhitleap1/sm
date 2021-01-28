@@ -1,8 +1,8 @@
 <thead class="thead-light">
     <tr>
-        <th scope="col">{{ __('ID') }}</th>
+        <th scope="col">{{ __('qrlanding.ID') }}</th>
         @hasrole('admin')
-            <th scope="col">{{ __('Restaurant') }}</th>
+            <th scope="col">{{ __('qrlanding.restaurant') }}</th>
         @endhasrole
         <th class="table-web" scope="col">{{ __('qrlanding.created') }}</th>
         <th class="table-web" scope="col">{{ __('qrlanding.table-Method') }}</th>
