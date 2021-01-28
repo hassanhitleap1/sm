@@ -2,28 +2,28 @@
     <tr>
         <th scope="col">{{ __('ID') }}</th>
         @hasrole('admin|driver')
-            <th scope="col">{{ __('Restaurant') }}</th>
+            <th scope="col">{{ __('qrlanding.restaurant') }}</th>
         @endhasrole
-        <th class="table-web" scope="col">{{ __('Created') }}</th>
-        <th class="table-web" scope="col">{{ __('Time Slot') }}</th>
-        <th class="table-web" scope="col">{{ __('Method') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.created') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.time-slot') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.method') }}</th>
         <th scope="col">{{ __('Last status') }}</th>
         @hasrole('admin|owner|driver')
-            <th class="table-web" scope="col">{{ __('Client') }}</th>
+            <th class="table-web" scope="col">{{ __('qrlanding.client') }}</th>
         @endhasrole
         @role('admin')
-            <th class="table-web" scope="col">{{ __('Address') }}</th>
+            <th class="table-web" scope="col">{{ __('qrlanding.address') }}</th>
         @endrole
         @role('owner')
-            <th class="table-web" scope="col">{{ __('Items') }}</th>
+            <th class="table-web" scope="col">{{ __('qrlanding.items') }}</th>
         @endrole
         @hasrole('admin|owner')
-            <th class="table-web" scope="col">{{ __('Driver') }}</th>
+            <th class="table-web" scope="col">{{ __('qrlanding.driver') }}</th>
         @endhasrole
-        <th class="table-web" scope="col">{{ __('Price') }}</th>
-        <th class="table-web" scope="col">{{ __('Delivery') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.price') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.delivery') }}</th>
         @if(auth()->user()->hasRole('admin') || auth()->user()->hasRole('owner') || auth()->user()->hasRole('driver'))
-            <th scope="col">{{ __('Actions') }}</th>
+            <th scope="col">{{ __('qrlanding.actions') }}</th>
         @endif
     </tr>
 </thead>
@@ -55,9 +55,9 @@
     </td>
     <td class="table-web">
         @if ($order->delivery_method==1)
-            <span class="badge badge-primary badge-pill">{{ __('Delivery') }}</span>
+            <span class="badge badge-primary badge-pill">{{ __('qrlanding.delivery') }}</span>
         @else
-            <span class="badge badge-success badge-pill">{{ __('Pickup') }}</span>
+            <span class="badge badge-success badge-pill">{{ __('qrlanding.pickup') }}</span>
         @endif
 
     </td>
