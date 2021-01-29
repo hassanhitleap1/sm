@@ -23,7 +23,7 @@
                         </h5>
                         <div class="font-weight-300 mb-5">{{ __('qrlanding.thanks-for-your-purchase').", " }}<span class="h3">{{ $order->restorant->name }}</span></div>
                         @if (env('WILDCARD_DOMAIN_READY',false))
-                            <a href="{{ (isset($_SERVER['HTTPS'])&&$_SERVER["HTTPS"] ?"https://":"http://").$order->restorant->subdomain.".".str_replace("www.","",$_SERVER['HTTP_HOST']) }}" class="btn btn-outline-primary btn-sm">{{ __('Go back to restaurant') }}</a>
+                            <a href="{{ (isset($_SERVER['HTTPS'])&&$_SERVER["HTTPS"] ?"https://":"http://").$order->restorant->subdomain.".".str_replace("www.","",$_SERVER['HTTP_HOST']) }}" class="btn btn-outline-primary btn-sm">{{ __('qrlanding.go-back-to-restaurant') }}</a>
                         @else
                             <a href="{{ route('vendor',$order->restorant->subdomain) }}" class="btn btn-outline-primary btn-sm">{{ __('qrlanding.go-back-to-restaurant') }}</a>
                         @endif

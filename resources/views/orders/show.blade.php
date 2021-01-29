@@ -14,7 +14,7 @@
                                 <h3 class="mb-0">{{ "#".$order->id." - ".$order->created_at->format(env('DATETIME_DISPLAY_FORMAT','d M Y H:i')) }}</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ route('orders.index') }}" class="btn btn-sm btn-primary">{{ __('Back') }}</a>
+                                <a href="{{ route('orders.index') }}" class="btn btn-sm btn-primary">{{ __('qrlanding.back') }}</a>
                             </div>
                         </div>
                     </div>

@@ -57,7 +57,7 @@
         @if ($order->delivery_method==1)
             <span class="badge badge-primary badge-pill">{{ __('qrlanding.delivery') }}</span>
         @else
-            <span class="badge badge-success badge-pill">{{ __('qrlanding.pickup') }}</span>
+            <span class="badge badge-success badge-pill">{{ __('qrlanding.pick-up') }}</span>
         @endif
 
     </td>

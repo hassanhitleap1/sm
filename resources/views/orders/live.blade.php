@@ -142,7 +142,7 @@
                     <!-- Card header -->
                     <div class="card-header">
                     <!-- Title -->
-                    <h5 class="h3 mb-0">{{ __("Status History")}}</h5>
+                    <h5 class="h3 mb-0">{{ __("qrlanding.status-history")}}</h5>
                     </div>
                     <!-- Card body -->
                     <div class="card-body">

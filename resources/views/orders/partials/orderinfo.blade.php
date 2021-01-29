@@ -40,9 +40,9 @@
              <h6 class="heading-small text-muted mb-4">{{ __('qrlanding.table-information') }}</h6>
              <div class="pl-lg-4">
                  
-                     <h3>{{ __('Table:')." ".$order->table->name }}</h3>
+                     <h3>{{ __('qrlanding.table').": ".$order->table->name }}</h3>
                      @if ($order->table->restoarea)
-                         <h4>{{ __('Area:')." ".$order->table->restoarea->name }}</h4>
+                         <h4>{{ __('qrlanding.area').": ".$order->table->restoarea->name }}</h4>
                      @endif
                  
                  
@@ -67,7 +67,7 @@
              <li><h4>{{ $item->pivot->qty." X ".$item->name }} -  @money($theItemPrice, $currency,$convert)  =  ( @money( $item->pivot->qty*$theItemPrice, $currency,true)
                  @hasrole('admin|driver|owner')
                      @if($item->pivot->vatvalue>0))
-                     <span class="small">-- {{ __('VAT ').$item->pivot->vat."%: "}} ( @money( $item->pivot->vatvalue, $currency,$convert) )</span>
+                     <span class="small">-- {{ __('qrlanding.VAT ').$item->pivot->vat."%: "}} ( @money( $item->pivot->vatvalue, $currency,$convert) )</span>
                      @endif
                  @endhasrole
              </h4>
@@ -107,7 +107,7 @@
      </ul>
      @if(!empty($order->comment))
         <br/>
-        <h4>{{ __('Comment') }}: {{ $order->comment }}</h4>
+        <h4>{{ __('qrlanding.comment') }}: {{ $order->comment }}</h4>
      @endif
      @if(strlen($order->phone)>2)
         <h4>{{ __('qrlanding.phone') }}: {{ $order->phone }}</h4>
@@ -123,9 +123,9 @@
      <h5>{{ __("VAT") }}: @money( $order->vatvalue, $currency,$convert)</h5>
  
      @endhasrole
-     <h4>{{ __("qrlanding.sub-rotal") }}: @money( $order->order_price, $currency,$convert)</h4>
+     <h4>{{ __("qrlanding.sub-total") }}: @money( $order->order_price, $currency,$convert)</h4>
      @if(config('app.isft'))
-     <h4>{{ __("Delivery") }}: @money( $order->delivery_price, $currency,$convert)</h4>
+     <h4>{{ __("qrlanding.delivery") }}: @money( $order->delivery_price, $currency,$convert)</h4>
      @endif
      <hr />
      <h3>{{ __("TOTAL") }}: @money( $order->delivery_price+$order->order_price, $currency,true)</h3>
@@ -134,7 +134,7 @@
      <h4>{{ __("qrlanding.payment-status") }}: {{ __(ucfirst($order->payment_status)) }}</h4>
      <hr />
      @if(config('app.isft'))
-         <h4>{{ __("qrlanding.delivery-method") }}: {{ $order->delivery_method==1?__('qrlanding.delivery'):__('qrlanding.pickup') }}</h4>
+         <h4>{{ __("qrlanding.delivery-method") }}: {{ $order->delivery_method==1?__('qrlanding.delivery'):__('qrlanding.pick-up') }}</h4>
          <h3>{{ __("qrlanding.time-slot") }}: @include('orders.partials.time', ['time'=>$order->time_formated])</h3>
      @else
          <h4>{{ __("qrlanding.dine-method") }}: {{ $order->delivery_method==3?__('qrlanding.dine-in'):__('qrlanding.takeaway') }}</h4>

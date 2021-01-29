@@ -5,7 +5,7 @@
             <th scope="col">{{ __('qrlanding.restaurant') }}</th>
         @endhasrole
         <th class="table-web" scope="col">{{ __('qrlanding.created') }}</th>
-        <th class="table-web" scope="col">{{ __('qrlanding.table-Method') }}</th>
+        <th class="table-web" scope="col">{{ __('qrlanding.table-method') }}</th>
         <th class="table-web" scope="col">{{ __('qrlanding.items') }}</th>
         <th class="table-web" scope="col">{{ __('qrlanding.price') }}</th>
         <th scope="col">{{ __('qrlanding.last-status') }}</th>

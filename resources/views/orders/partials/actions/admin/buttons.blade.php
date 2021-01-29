@@ -6,18 +6,18 @@
       
 <!-- Accept -->
 @if($lastStatusAlisas == "just_created")
-    <a href="{{ url('updatestatus/accepted_by_admin/'.$order->id) }}" class="btn btn-primary">{{ __('Accept') }}</a>
+    <a href="{{ url('updatestatus/accepted_by_admin/'.$order->id) }}" class="btn btn-primary">{{ __('qrlanding.accept') }}</a>
 @endif
 
 <!-- Reject -->
 @if($lastStatusAlisas == "just_created")
-    <a href="{{ url('updatestatus/rejected_by_admin/'.$order->id) }}" class="btn btn-danger">{{ __('Reject') }}</a>
+    <a href="{{ url('updatestatus/rejected_by_admin/'.$order->id) }}" class="btn btn-danger">{{ __('qrlanding.reject') }}</a>
 @endif
 
 <!-- Assign to driver -->
 @if($order->delivery_method.""!="2"&&$order->driver==null)
     @if($lastStatusAlisas == "accepted_by_restaurant"|$lastStatusAlisas == "prepared"|$lastStatusAlisas == "rejected_by_driver")
-        <button type="button" class="btn btn-primary" onClick=(setSelectedOrderId({{ $order->id }}))  data-toggle="modal" data-target="#modal-asign-driver">{{ __('Assign to driver') }}</button>
+        <button type="button" class="btn btn-primary" onClick=(setSelectedOrderId({{ $order->id }}))  data-toggle="modal" data-target="#modal-asign-driver">{{ __('qrlanding.assign-to-driver') }}</button>
     @endif
 @endif
    

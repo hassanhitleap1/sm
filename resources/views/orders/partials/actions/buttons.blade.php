@@ -3,7 +3,7 @@
 $lastStatusAlisas=$order->status->pluck('alias')->last();
 ?>
 <div class="card-footer py-4">
-    <h6 class="heading-small text-muted mb-4">{{ __('Actions') }}</h6   >
+    <h6 class="heading-small text-muted mb-4">{{ __('qrlanding.actions') }}</h6   >
     <nav class="justify-content-end" aria-label="...">
     @role('admin')
         <script>
@@ -22,7 +22,7 @@ $lastStatusAlisas=$order->status->pluck('alias')->last();
         @elseif($lastStatusAlisas == "prepared"&&$order->delivery_method.""!="2"&&$order->driver==null)
             <button type="button" class="btn btn-primary" onClick=(setSelectedOrderId({{ $order->id }}))  data-toggle="modal" data-target="#modal-asign-driver">{{ __('qrlanding.assign-to-driver') }}</button>
         @else
-            <p>{{ __('No actions for you right now!') }}</p>
+            <p>{{ __('qrlanding.no-actions-for-you-right-now') }}</p>
        @endif
     @endrole
     @role('owner')

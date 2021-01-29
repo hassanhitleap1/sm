@@ -13,11 +13,11 @@ $lastStatusAlisas=$order->status->pluck('alias')->last();
             <a href="{{'updatestatus/accepted_by_admin/'.$order->id }}" class="btn btn-success btn-sm order-action">{{ __('qrlanding.accept') }}</a>
             <a href="{{'updatestatus/rejected_by_admin/'.$order->id }}" class="btn btn-danger btn-sm order-action">{{ __('qrlanding.reject') }}</a>
         @elseif($lastStatusAlisas == "accepted_by_restaurant"&&$order->delivery_method.""!="2")
-            <button type="button" class="btn btn-primary btn-sm order-action" onClick=(setSelectedOrderId({{ $order->id }}))  data-toggle="modal" data-target="#modal-asign-driver">{{ __('Assign to driver') }}</a>
+            <button type="button" class="btn btn-primary btn-sm order-action" onClick=(setSelectedOrderId({{ $order->id }}))  data-toggle="modal" data-target="#modal-asign-driver">{{ __('qrlanding.assign-to-driver') }}</a>
         @elseif($lastStatusAlisas == "prepared"&&$order->driver==null)
-            <button type="button" class="btn btn-primary btn-sm order-action" onClick=(setSelectedOrderId({{ $order->id }}))  data-toggle="modal" data-target="#modal-asign-driver">{{ __('Assign to driver') }}</a>
+            <button type="button" class="btn btn-primary btn-sm order-action" onClick=(setSelectedOrderId({{ $order->id }}))  data-toggle="modal" data-target="#modal-asign-driver">{{ __('qrlanding.Assign to driver') }}</a>
         @else
-            <small>{{ __('No actions for you right now!') }}</small>
+            <small>{{ __('qrlanding.no-actions-for-you-right-now') }}</small>
         @endif
     </td>
     @endrole
@@ -64,9 +64,9 @@ $lastStatusAlisas=$order->status->pluck('alias')->last();
        @if($lastStatusAlisas == "prepared")
             <a href="{{'updatestatus/picked_up/'.$order->id }}" class="btn btn-primary btn-sm order-action">{{ __('qrlanding.picked-up') }}</a>
         @elseif($lastStatusAlisas == "picked_up")
-            <a href="{{'updatestatus/delivered/'.$order->id }}" class="btn btn-primary btn-sm order-action">{{ __('qrlanding.delivered') }}</a>
+            <a href="{{'updatestatus/delivered/'.$order->id }}" class="btn btn-primary btn-sm order-action">{{ __('qrlanding.picked-up') }}</a>
         @else
-            <small>{{  __('qrlanding.no-actions-for-you-right-now!') }}</small>
+            <small>{{  __('qrlanding.no-actions-for-you-right-now') }}</small>
         @endif
     </td>
     @endrole
