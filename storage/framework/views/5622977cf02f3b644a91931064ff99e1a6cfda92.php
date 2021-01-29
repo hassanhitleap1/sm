@@ -5,7 +5,7 @@
             <th scope="col"><?php echo e(__('qrlanding.restaurant')); ?></th>
         <?php endif; ?>
         <th class="table-web" scope="col"><?php echo e(__('qrlanding.created')); ?></th>
-        <th class="table-web" scope="col"><?php echo e(__('qrlanding.table-Method')); ?></th>
+        <th class="table-web" scope="col"><?php echo e(__('qrlanding.table-method')); ?></th>
         <th class="table-web" scope="col"><?php echo e(__('qrlanding.items')); ?></th>
         <th class="table-web" scope="col"><?php echo e(__('qrlanding.price')); ?></th>
         <th scope="col"><?php echo e(__('qrlanding.last-status')); ?></th>

@@ -43,7 +43,7 @@
                                                         @csrf
                                                         @method('delete')
                                                         <button type="submit" class="dropdown-item">
-                                                            {{ __('Delete') }}
+                                                            {{ __('qrlanding.delete') }}
                                                         </button>
                                                     </form>
                                                 </div>
@@ -60,7 +60,7 @@
                             <nav class="d-flex justify-content-end" aria-label="...">
                             </nav>
                         @else
-                            <h4>{{ __('You don`t have any addresses') }} ...</h4>
+                            <h4>{{ __('qrlanding.you-dont-have-any-addresses') }} ...</h4>
                         @endif
                     </div>
                 </div>
