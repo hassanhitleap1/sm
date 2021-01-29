@@ -30,15 +30,15 @@
     <div class="col-md-3">
         <div class="input-daterange datepicker row align-items-center" style="margin-left: 15px;">
            <div class="form-group">
-                <label class="form-control-label">{{ __('Active from') }}</label>
+                <label class="form-control-label">{{ __('qrlanding.active-from') }}</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                     </div>
                     @if(isset($banner))
-                        <input name="active_from" class="form-control" placeholder="{{ __('Active from') }}" value="{{ old('active_from', $banner->active_from) }}" type="text">
+                        <input name="active_from" class="form-control" placeholder="{{ __('qrlanding.active-from') }}" value="{{ old('active_from', $banner->active_from) }}" type="text">
                     @else
-                        <input name="active_from" class="form-control" placeholder="{{ __('Active from') }}" type="text">
+                        <input name="active_from" class="form-control" placeholder="{{ __('qrlanding.active-from') }}" type="text">
                     @endif
                 </div>
             </div>
@@ -47,15 +47,15 @@
     <div class="col-md-3">
         <div class="input-daterange datepicker row align-items-center" style="margin-left: 15px;">
            <div class="form-group">
-                <label class="form-control-label">{{ __('Active to') }}</label>
+                <label class="form-control-label">{{ __('qrlanding.active-to') }}</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                     </div>
                     @if(isset($banner))
-                        <input name="active_to" class="form-control" placeholder="{{ __('Active to') }}" value="{{ old('active_to', $banner->active_to) }}" type="text">
+                        <input name="active_to" class="form-control" placeholder="{{ __('qrlanding.active-to') }}" value="{{ old('active_to', $banner->active_to) }}" type="text">
                     @else
-                        <input name="active_to" class="form-control" placeholder="{{ __('Active to') }}" type="text">
+                        <input name="active_to" class="form-control" placeholder="{{ __('qrlanding.active-to') }}" type="text">
                     @endif
                 </div>
             </div>

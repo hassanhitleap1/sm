@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => __('Clients')])
+@extends('layouts.app', ['title' => __('qrlanding.clients')])
 
 @section('content')
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -11,7 +11,7 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col-12">
-                                <h3 class="mb-0">{{ __('Clients') }}</h3>
+                                <h3 class="mb-0">{{ __('qrlanding.clients') }}</h3>
                             </div>
                         </div>
                     </div>
@@ -24,12 +24,12 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">{{ __('Name') }}</th>
-                                    <th scope="col">{{ __('Owner') }}</th>
-                                    <th scope="col">{{ __('Owner email') }}</th>
-                                    <th scope="col">{{ __('Creation Date') }}</th>
+                                    <th scope="col">{{ __('qrlanding.name') }}</th>
+                                    <th scope="col">{{ __('qrlanding.owner') }}</th>
+                                    <th scope="col">{{ __('qrlanding.owner-email') }}</th>
+                                    <th scope="col">{{ __('qrlanding.creation-date') }}</th>
                                     @if(env('ENABLE_BIRTH_DATE_ON_REGISTER',false))
-                                        <th scope="col">{{ __('Birth Date') }}</th>
+                                        <th scope="col">{{ __('qrlanding.birth-date') }}</th>
                                     @endif
                                     <th scope="col"></th>
                                 </tr>
@@ -57,7 +57,7 @@
                                                             @csrf
                                                             @method('delete')
                                                             <button type="button" class="dropdown-item" onclick="confirm('{{ __("Are you sure you want to deactivate this user?") }}') ? this.parentElement.submit() : ''">
-                                                                {{ __('Deactivate') }}
+                                                                {{ __('qrlanding.deactivate') }}
                                                             </button>
                                                         </form>
 

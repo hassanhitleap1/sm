@@ -9,7 +9,7 @@
                 <div class="card bg-secondary shadow border-0">
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center text-muted mb-4">
-                            <small>{{ __('Verify Your Email Address') }}</small>
+                            <small>{{ __('qrlanding.verify-your-email-address') }}</small>
                         </div>
                         <div>
                             @if (session('resent'))
@@ -23,7 +23,7 @@
                                 {{ __('If you did not receive the email') }},
                                 <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                                     @csrf
-                                    <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>.
+                                    <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('qrlanding.click-here-to-request-another') }}</button>.
                                 </form>
                             @endif
                         </div>

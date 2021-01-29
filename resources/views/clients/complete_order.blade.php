@@ -1,4 +1,4 @@
-<h3>{{ __('Finalize order')}}</h3>
+<h3>{{ __('qrlanding.finalize-order')}}</h3>
 <br />
 <form id="order-form" role="form" method="post" action="{{route('order.store')}}" autocomplete="off" enctype="multipart/form-data">
     @csrf
@@ -6,7 +6,7 @@
         <div class="col-md-10">
             <div class="form-group{{ $errors->has('addressID') ? ' has-danger' : '' }}">
             @if(count(auth()->user()->addresses))
-                <label class="form-control-label" for="addressID">{{ __('Address')}}</label>
+                <label class="form-control-label" for="addressID">{{ __('qrlanding.address')}}</label>
                     <select name="addressID" id="addressID" class="form-control{{ $errors->has('addressID') ? ' is-invalid' : '' }}" required>
                         @foreach (auth()->user()->addresses as $address)
                             <option value={{ $address->id }}>{{$address->address}}</option>
@@ -24,16 +24,16 @@
         </div>
         <div class="col-md-2">
             <div class="form-group">
-                <label class="text-white" for="exampleFormControlSelect1">{{ __('Or add new') }}</label>
-                <button type="button" data-toggle="modal" data-target="#modal-order-new-address"  class="btn btn-primary">{{ __('Add new') }}</button>
+                <label class="text-white" for="exampleFormControlSelect1">{{ __('qrlanding.or-add-new') }}</label>
+                <button type="button" data-toggle="modal" data-target="#modal-order-new-address"  class="btn btn-primary">{{ __('qrlanding.add-new') }}</button>
             </div>
         </div>
     </div>
     @if(count(auth()->user()->addresses))
     @endif
     <div class="form-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
-        <label class="form-control-label" for="phone">{{ __('Phone') }}</label>
-        <input name="phone" id="phone" type="text" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" placeholder="{{ __( 'Your phone here' ) }} ..." value="{{auth()->user()->phone}}" required>
+        <label class="form-control-label" for="phone">{{ __('qrlanding.phone') }}</label>
+        <input name="phone" id="phone" type="text" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" placeholder="{{ __( 'qrlanding.your-phone-here' ) }} ..." value="{{auth()->user()->phone}}" required>
         @if ($errors->has('phone'))
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $errors->first('phone') }}</strong>
@@ -41,8 +41,8 @@
         @endif
     </div>
     <div class="form-group{{ $errors->has('comment') ? ' has-danger' : '' }}">
-        <label class="form-control-label" for="comment">{{ __('Comment') }}</label>
-        <textarea name="comment" id="comment" class="form-control{{ $errors->has('comment') ? ' is-invalid' : '' }}" placeholder="{{ __( 'Your comment here' ) }} ..." required></textarea>
+        <label class="form-control-label" for="comment">{{ __('qrlanding.comment') }}</label>
+        <textarea name="comment" id="comment" class="form-control{{ $errors->has('comment') ? ' is-invalid' : '' }}" placeholder="{{ __( 'qrlanding.your-comment-here' ) }} ..." required></textarea>
         @if ($errors->has('comment'))
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $errors->first('comment') }}</strong>
@@ -171,7 +171,7 @@
     </div>
     @if(count(auth()->user()->addresses))
         <div class="text-center" id="totalSubmitStripe">
-            <button v-if="totalPrice" type="submit" class="btn btn-success mt-4">{{ __('Place order') }}</button>
+            <button v-if="totalPrice" type="submit" class="btn btn-success mt-4">{{ __('qrlanding.place-order') }}</button>
         </div>
     @endif
 
@@ -183,7 +183,7 @@
 <form id="ideal-payment-form" style="display: {{ env('DEFAULT_PAYMENT','cod')=="ideal"?"block":"none"}};">
 
     <div style="width: 30em" class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-        <input name="name" id="name-ideal" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __( 'Name on card' ) }}" value="{{auth()->user()->name}}" required>
+        <input name="name" id="name-ideal" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __( 'qrlanding.name-on-card' ) }}" value="{{auth()->user()->name}}" required>
         @if ($errors->has('name'))
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $errors->first('name') }}</strong>
@@ -202,7 +202,7 @@
 
     @if(count(auth()->user()->addresses))
         <div class="text-center" id="totalSubmitStripe">
-            <button v-if="totalPrice" type="submit" class="btn btn-success mt-4">{{ __('Submit payment') }}</button>
+            <button v-if="totalPrice" type="submit" class="btn btn-success mt-4">{{ __('qrlanding.submit-payment') }}</button>
         </div>
     @endif
 

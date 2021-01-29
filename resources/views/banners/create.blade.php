@@ -11,9 +11,9 @@
                     <div class="row align-items-center">
                         <div class="col-8">
                             @if(isset($coupon))
-                                <h3 class="mb-0">{{ __('Edit banner') }}</h3>
+                                <h3 class="mb-0">{{ __('qrlanding.edit-banner') }}</h3>
                             @else
-                                <h3 class="mb-0">{{ __('New banner') }}</h3>
+                                <h3 class="mb-0">{{ __('qrlanding.new-banner') }}</h3>
                             @endif
                         </div>
                         <div class="col-4 text-right">

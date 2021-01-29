@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered modal-large" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="modal-title-notification">{{ __('Add new address') }}</h3>
+                <h3 class="modal-title" id="modal-title-notification">{{ __('qrlanding.add-new-address') }}</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -13,7 +13,7 @@
                         <form role="form">
                             @csrf
                             <div class="form-group" id="new_address_checkout_holder">
-                                <label class="form-control-label" for="new_address_checkout">{{ __('Address') }}</label>
+                                <label class="form-control-label" for="new_address_checkout">{{ __('qrlanding.address') }}</label>
                                 <select class="noselecttwo form-control" id="new_address_checkout">
                                 </select>
                             </div>
@@ -27,7 +27,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-group{{ $errors->has('address') ? ' has-danger' : '' }}">
-                                            <input name="address" id="address" type="text" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" placeholder="{{ __('Address')}}">
+                                            <input name="address" id="address" type="text" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" placeholder="{{ __('qrlanding.address')}}">
                                             @if ($errors->has('address'))
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $errors->first('address') }}</strong>
@@ -35,7 +35,7 @@
                                             @endif
                                         </div>
                                         <div class="form-group{{ $errors->has('address_number') ? ' has-danger' : '' }}">
-                                            <input name="address_number" id="address_number" type="text" class="form-control{{ $errors->has('address_number') ? ' is-invalid' : '' }}" placeholder="{{ __('Address number')}}">
+                                            <input name="address_number" id="address_number" type="text" class="form-control{{ $errors->has('address_number') ? ' is-invalid' : '' }}" placeholder="{{ __('qrlanding.address-number')}}">
                                             @if ($errors->has('address_number'))
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $errors->first('address_number') }}</strong>
@@ -43,7 +43,7 @@
                                             @endif
                                         </div>
                                         <div class="form-group{{ $errors->has('number_apartment') ? ' has-danger' : '' }}">
-                                            <input name="number_apartment" id="number_apartment" type="text" class="form-control{{ $errors->has('number_apartment') ? ' is-invalid' : '' }}" placeholder="{{ __('Apartment number')}}">
+                                            <input name="number_apartment" id="number_apartment" type="text" class="form-control{{ $errors->has('number_apartment') ? ' is-invalid' : '' }}" placeholder="{{ __('qrlanding.apartment-number')}}">
                                             @if ($errors->has('number_apartment'))
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $errors->first('number_apartment') }}</strong>
@@ -55,7 +55,7 @@
                                     </div>
                                     <div class="col">
                                         <div class="form-group{{ $errors->has('number_intercom') ? ' has-danger' : '' }}">
-                                            <input name="number_intercom" id="number_intercom" type="text" class="form-control{{ $errors->has('number_intercom') ? ' is-invalid' : '' }}" placeholder="{{ __('Intercom')}}">
+                                            <input name="number_intercom" id="number_intercom" type="text" class="form-control{{ $errors->has('number_intercom') ? ' is-invalid' : '' }}" placeholder="{{ __('qrlanding.intercom')}}">
                                             @if ($errors->has('number_intercom'))
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $errors->first('number_intercom') }}</strong>
@@ -63,7 +63,7 @@
                                             @endif
                                         </div>
                                         <div class="form-group{{ $errors->has('floor') ? ' has-danger' : '' }}">
-                                            <input name="floor" id="floor" type="text" class="form-control{{ $errors->has('floor') ? ' is-invalid' : '' }}" placeholder="{{ __('Floor')}}">
+                                            <input name="floor" id="floor" type="text" class="form-control{{ $errors->has('floor') ? ' is-invalid' : '' }}" placeholder="{{ __('qrlanding.floor')}}">
                                             @if ($errors->has('floor'))
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $errors->first('floor') }}</strong>
@@ -71,7 +71,7 @@
                                             @endif
                                         </div>
                                         <div class="form-group{{ $errors->has('entry') ? ' has-danger' : '' }}">
-                                            <input name="entry" id="entry" type="text" class="form-control{{ $errors->has('entry') ? ' is-invalid' : '' }}" placeholder="{{ __('Entry number')}}">
+                                            <input name="entry" id="entry" type="text" class="form-control{{ $errors->has('entry') ? ' is-invalid' : '' }}" placeholder="{{ __('qrlanding.entry-number')}}">
                                             @if ($errors->has('entry'))
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $errors->first('entry') }}</strong>
@@ -94,8 +94,8 @@
 
             <div class="modal-footer">
 
-                <button type="button" class="btn btn-link" data-dismiss="modal">{{ __('Close') }}</button>
-                <button type="button" id="submitNewAddress" class="btn btn-outline-success">{{ __('Save') }}</button>
+                <button type="button" class="btn btn-link" data-dismiss="modal">{{ __('qrlanding.close') }}</button>
+                <button type="button" id="submitNewAddress" class="btn btn-outline-success">{{ __('qrlanding.save') }}</button>
               </div>
 
         </div>

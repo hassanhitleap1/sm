@@ -9,7 +9,7 @@
                         </div>
                     @endif
                     <div class="card">
-                        <div class="card-header">{{ __('Verify your profile') }}</div>
+                        <div class="card-header">{{ __('qrlanding.verify-your-profile') }}</div>
                         <div class="card-body">
                             <p>{{ __('Thanks for registering with our platform. We will sent you message on your phone number. Provide the code below.') }}</p>
 
@@ -18,8 +18,8 @@
                                     <form method="post" action="{{ route('phoneverification.verify') }}">
                                         @csrf
                                         <div class="form-group">
-                                            <label for="code">{{ __('Verification Code') }}</label>
-                                            <input id="code" class="form-control{{ $errors->has('code') ? ' is-invalid' : '' }}" name="code" type="text" placeholder="{{ __('Enter your verification code')}}" required autofocus>
+                                            <label for="code">{{ __('qrlanding.verification-code') }}</label>
+                                            <input id="code" class="form-control{{ $errors->has('code') ? ' is-invalid' : '' }}" name="code" type="text" placeholder="{{ __('qrlanding.enter-your-verification-code')}}" required autofocus>
                                             @if ($errors->has('code'))
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $errors->first('code') }}</strong>
@@ -27,7 +27,7 @@
                                             @endif
                                         </div>
                                         <div class="form-group">
-                                            <button class="btn btn-primary">{{ __('Verify profile') }}</button>
+                                            <button class="btn btn-primary">{{ __('qrlanding.verify-profile') }}</button>
                                         </div>
                                     </form>
                                 </div>

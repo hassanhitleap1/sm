@@ -28,25 +28,25 @@
                            <h3>{{ __('DEMO credentials:') }}</h3>
 
                             <small>
-                                <b>{{ __('ADMIN') }}</b><br/>
-                                {{ __('Username') }} <strong>admin@example.com</strong><br />
-                                {{ __('Password') }} <strong>secret</strong>
+                                <b>{{ __('qrlanding.admin') }}</b><br/>
+                                {{ __('qrlanding.username') }} <strong>admin@example.com</strong><br />
+                                {{ __('qrlanding.password') }} <strong>secret</strong>
                             </small>
                             <small>
-                                <br /><br /><b>{{ __('OWNER') }}</b><br/>
-                                {{ __('Username') }} <strong>owner@example.com</strong><br />
-                                {{ __('Password') }} <strong>secret</strong>
+                                <br /><br /><b>{{ __('qrlanding.owner') }}</b><br/>
+                                {{ __('qrlanding.username') }} <strong>owner@example.com</strong><br />
+                                {{ __('qrlanding.password') }} <strong>secret</strong>
                             </small>
                             @if (config('app.isft'))
                                 <small>
-                                    <br /><br /><b>{{ __('DRIVER') }}</b><br/>
-                                    {{ __('Username') }} <strong>driver@example.com</strong><br />
-                                    {{ __('Password') }} <strong>secret</strong>
+                                    <br /><br /><b>{{ __('qrlanding.driver') }}</b><br/>
+                                    {{ __('qrlanding.username') }} <strong>driver@example.com</strong><br />
+                                    {{ __('qrlanding.password') }} <strong>secret</strong>
                                 </small>
                                 <small>
-                                    <br /><br /><b>{{ __('CLIENT') }}</b><br/>
-                                    {{ __('Username') }} <strong>client@example.com</strong><br />
-                                    {{ __('Password') }} <strong>secret</strong>
+                                    <br /><br /><b>{{ __('qrlanding.clinet') }}</b><br/>
+                                    {{ __('qrlanding.username') }} <strong>client@example.com</strong><br />
+                                    {{ __('qrlanding.password') }} <strong>secret</strong>
                                 </small>
                             @endif
 

@@ -17,7 +17,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                                     </div>
-                                    <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" type="text" name="name" value="{{ old('name') }}" required autofocus>
+                                    <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('qrlanding.name') }}" type="text" name="name" value="{{ old('name') }}" required autofocus>
                                 </div>
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" style="display: block;" role="alert">
@@ -30,7 +30,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                     </div>
-                                    <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}" type="email" name="email" value="{{ old('email') }}" required>
+                                    <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('qrlanding.email') }}" type="email" name="email" value="{{ old('email') }}" required>
                                 </div>
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" style="display: block;" role="alert">
@@ -43,7 +43,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
                                     </div>
-                                    <input class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" placeholder="{{ __('Phone') }}" type="phone" name="phone" value="{{ old('phone') }}" required>
+                                    <input class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" placeholder="{{ __('qrlanding.phone') }}" type="phone" name="phone" value="{{ old('phone') }}" required>
                                 </div>
                                 @if ($errors->has('phone'))
                                     <span class="invalid-feedback" style="display: block;" role="alert">
@@ -56,7 +56,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                     </div>
-                                    <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ __('Password') }}" type="password" name="password" required>
+                                    <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ __('qrlanding.password') }}" type="password" name="password" required>
                                 </div>
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" style="display: block;" role="alert">
@@ -69,7 +69,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                     </div>
-                                    <input class="form-control" placeholder="{{ __('Confirm Password') }}" type="password" name="password_confirmation" required>
+                                    <input class="form-control" placeholder="{{ __('qrlanding.confirm-password') }}" type="password" name="password_confirmation" required>
                                 </div>
                             </div>
 
@@ -79,7 +79,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-badge"></i></span>
                                     </div>
-                                    <input class="form-control" placeholder="{{ __('Date of Birth') }}" id="birth_date" type="date" name="birth_date" required>
+                                    <input class="form-control" placeholder="{{ __('qrlanding.date-of-birth') }}" id="birth_date" type="date" name="birth_date" required>
                                 </div>
                                 @if ($errors->has('birth_date'))
                                 <span class="invalid-feedback" style="display: block;" role="alert">
@@ -91,7 +91,7 @@
 
 
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary mt-4">{{ __('Create account') }}</button>
+                                <button type="submit" class="btn btn-primary mt-4">{{ __('qrlanding.create-account') }}</button>
                             </div>
                         </form>
                     </div>
@@ -100,13 +100,13 @@
                     <div class="col-6">
                         @if (Route::has('password.request'))
                             <a href="{{ route('password.request') }}" class="text-light">
-                                <small>{{ __('Forgot password?') }}</small>
+                                <small>{{ __('qrlanding.forgot-password') }}</small>
                             </a>
                         @endif
                     </div>
                     <div class="col-6 text-right">
                         <a href="{{ route('login') }}" class="text-light">
-                            <small>{{ __('Back to login') }}</small>
+                            <small>{{ __('qrlanding.back-to-login') }}</small>
                         </a>
                     </div>
                 </div>
