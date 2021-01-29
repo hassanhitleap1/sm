@@ -35,4 +35,4 @@
 
     </div>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.app', ['title' => __('Orders')], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\restaurant-menus\resources\views/finances/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', ['title' => __('qrlanding.orders')], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\restaurant-menus\resources\views/finances/index.blade.php ENDPATH**/ ?>

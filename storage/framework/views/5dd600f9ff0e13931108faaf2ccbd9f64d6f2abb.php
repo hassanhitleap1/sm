@@ -2,20 +2,20 @@
     <tr>
         <th scope="col"><?php echo e(__('ID')); ?></th>
         <?php if(auth()->check() && auth()->user()->hasRole('admin|driver')): ?>
-            <th scope="col"><?php echo e(__('Restaurant')); ?></th>
+            <th scope="col"><?php echo e(__('qrlanding.restaurant')); ?></th>
         <?php endif; ?>
-        <th class="table-web" scope="col"><?php echo e(__('Created')); ?></th>
-        <th class="table-web" scope="col"><?php echo e(__('Method')); ?></th>
+        <th class="table-web" scope="col"><?php echo e(__('qrlanding.created')); ?></th>
+        <th class="table-web" scope="col"><?php echo e(__('qrlanding.method')); ?></th>
 
-        <th class="table-web" scope="col"><?php echo e(__('Platform fee')); ?></th>
-        <th class="table-web" scope="col"><?php echo e(__('Processor fee')); ?></th>
-        <th class="table-web" scope="col"><?php echo e(__('Delivery')); ?></th>
-        <th class="table-web" scope="col"><?php echo e(__('Net Price + VAT')); ?></th>
-        <th class="table-web" scope="col"><?php echo e(__('VAT')); ?></th>
-        <th class="table-web" scope="col"><?php echo e(__('Net Price')); ?></th>
+        <th class="table-web" scope="col"><?php echo e(__('qrlanding.platform-fee')); ?></th>
+        <th class="table-web" scope="col"><?php echo e(__('qrlanding.processor-fee')); ?></th>
+        <th class="table-web" scope="col"><?php echo e(__('qrlanding.delivery')); ?></th>
+        <th class="table-web" scope="col"><?php echo e(__('qrlanding.net-price+VAT')); ?></th>
+        <th class="table-web" scope="col"><?php echo e(__('qrlanding.VAT')); ?></th>
+        <th class="table-web" scope="col"><?php echo e(__('qrlanding.net-price')); ?></th>
         
         
-        <th class="table-web" scope="col"><?php echo e(__('Total Price')); ?></th>
+        <th class="table-web" scope="col"><?php echo e(__('qrlanding.total-price')); ?></th>
         
     </tr>
 </thead>
@@ -45,9 +45,9 @@
     </td>
     <td class="table-web">
         <?php if($order->delivery_method==1): ?>
-            <span class="badge badge-primary badge-pill"><?php echo e(__('Delivery')); ?> | <?php echo e(__($order->payment_method)); ?> </span>
+            <span class="badge badge-primary badge-pill"><?php echo e(__('qrlanding.delivery')); ?> | <?php echo e(__($order->payment_method)); ?> </span>
         <?php else: ?>
-            <span class="badge badge-success badge-pill"><?php echo e(__('Pickup')); ?> | <?php echo e(__($order->payment_method)); ?></span>
+            <span class="badge badge-success badge-pill"><?php echo e(__('qrlanding.pickup')); ?> | <?php echo e(__($order->payment_method)); ?></span>
         <?php endif; ?>
 
     </td>
@@ -82,4 +82,5 @@
    
 
 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-</tbody><?php /**PATH C:\xampp\htdocs\restaurant-menus\resources\views/finances/financialdisplay.blade.php ENDPATH**/ ?>
+</tbody>
+<?php /**PATH C:\xampp\htdocs\restaurant-menus\resources\views/finances/financialdisplay.blade.php ENDPATH**/ ?>

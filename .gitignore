@@ -1,1 +1,14 @@
-storage
+/node_modules
+/storage/*.key
+/vendor
+/.idea
+/.vscode
+/.vagrant
+/storage
+/storage/log
+/storage/framework/views
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
