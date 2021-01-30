@@ -36,9 +36,9 @@
                         <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                     </div>
                     @if(isset($coupon))
-                        <input name="active_from" class="form-control" placeholder="{{ __('Active from') }}" value="{{ old('active_from', $coupon->active_from) }}" type="text">
+                        <input name="active_from" class="form-control" placeholder="{{ __('qrlanding.active-from') }}" value="{{ old('active_from', $coupon->active_from) }}" type="text">
                     @else
-                        <input name="active_from" class="form-control" placeholder="{{ __('Active from') }}" type="text">
+                        <input name="active_from" class="form-control" placeholder="{{ __('qrlanding.active-from') }}" type="text">
                     @endif
                 </div>
             </div>
@@ -53,9 +53,9 @@
                         <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                     </div>
                     @if(isset($coupon))
-                        <input name="active_to" class="form-control" placeholder="{{ __('Active to') }}" value="{{ old('active_to', $coupon->active_to) }}" type="text">
+                        <input name="active_to" class="form-control" placeholder="{{ __('qrlanding.active-to') }}" value="{{ old('active_to', $coupon->active_to) }}" type="text">
                     @else
-                        <input name="active_to" class="form-control" placeholder="{{ __('Active to') }}" type="text">
+                        <input name="active_to" class="form-control" placeholder="{{ __('qrlanding.active-to') }}" type="text">
                     @endif
                 </div>
             </div>

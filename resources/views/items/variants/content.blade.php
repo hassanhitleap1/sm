@@ -1,7 +1,7 @@
 @section('thead')
-    <th>{{ __('Price') }}</th>
-    <th>{{ __('Options') }}</th>
-    <th>{{ __('Actions') }}</th>
+    <th>{{ __('qrlanding.price') }}</th>
+    <th>{{ __('qrlanding.options') }}</th>
+    <th>{{ __('qrlanding.actions') }}</th>
 @endsection
 @section('tbody')
 @foreach ($setup['items'] as $item)

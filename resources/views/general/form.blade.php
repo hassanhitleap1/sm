@@ -13,9 +13,9 @@
             </div>
         @endisset
         @if (isset($setup['isupdate']))
-            <button type="submit" class="btn btn-primary">{{ __('Update')}}</button>  
+            <button type="submit" class="btn btn-primary">{{ __('qrlanding.update')}}</button>  
         @else
-            <button type="submit" class="btn btn-primary">{{ __('Insert')}}</button>  
+            <button type="submit" class="btn btn-primary">{{ __('qrlanding.insert')}}</button>  
         @endif
     </form>
 @endsection

@@ -1,10 +1,10 @@
-@extends('layouts.app', ['title' => __('Restaurant Menu Management')])
+@extends('layouts.app', ['title' => __('qrlanding.restaurant-menu-management')])
 @section('admin_title')
     {{__('Menu')}}
 @endsection
 @section('content')
     @include('items.partials.modals')
-    @include('items.partials.header', ['title' => __('Edit Restaurant Menu')])
+    @include('items.partials.header', ['title' => __('qrlanding.edit-restaurant-menu')])
 
     <div class="container-fluid mt--7">
         <div class="row">
@@ -15,10 +15,10 @@
                             <div class="col-12">
                                 <div class="row">
                                     <div class="col">
-                                        <h3 class="mb-0">{{ __('Restaurant Menu Management') }}</h3>
+                                        <h3 class="mb-0">{{ __('qrlanding.restaurant-menu-management') }}</h3>
                                     </div>
                                     <div class="col-auto">
-                                        <button class="btn btn-icon btn-1 btn-sm btn-primary" type="button" data-toggle="modal" data-target="#modal-items-category" data-toggle="tooltip" data-placement="top" title="{{ __('Add new category')}}">
+                                        <button class="btn btn-icon btn-1 btn-sm btn-primary" type="button" data-toggle="modal" data-target="#modal-items-category" data-toggle="tooltip" data-placement="top" title="{{ __('qrlanding.add-new-category')}}">
                                             <span class="btn-inner--icon"><i class="fa fa-plus"></i></span>
                                         </button>
                                         @if($canAdd)

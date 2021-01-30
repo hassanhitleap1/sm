@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => __('Drivers')])
+@extends('layouts.app', ['title' => __('qrlanding.drivers')])
 
 @section('content')
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -11,10 +11,10 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">{{ __('Drivers') }}</h3>
+                                <h3 class="mb-0">{{ __('qrlanding.drivers') }}</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ route('drivers.create') }}" class="btn btn-sm btn-primary">{{ __('Add driver') }}</a>
+                                <a href="{{ route('drivers.create') }}" class="btn btn-sm btn-primary">{{ __('qrlanding.add-driver') }}</a>
                             </div>
                         </div>
                     </div>
@@ -27,10 +27,10 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">{{ __('Name') }}</th>
-                                    <th scope="col">{{ __('Email') }}</th>
-                                    <th scope="col">{{ __('Acceptance rating') }}</th>
-                                    <th scope="col">{{ __('Creation Date') }}</th>
+                                    <th scope="col">{{ __('qrlanding.name') }}</th>
+                                    <th scope="col">{{ __('qrlanding.email') }}</th>
+                                    <th scope="col">{{ __('qrlanding.acceptance-rating') }}</th>
+                                    <th scope="col">{{ __('qrlanding.creation-date') }}</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
@@ -58,7 +58,7 @@
 
                                                             
                                                             <button type="button" class="dropdown-item" onclick="confirm('{{ __("Are you sure you want to delete this user?") }}') ? this.parentElement.submit() : ''">
-                                                                {{ __('Deactivate') }}
+                                                                {{ __('qrlanding.deactivate') }}
                                                             </button>
                                                         </form>
 

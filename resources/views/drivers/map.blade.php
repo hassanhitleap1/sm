@@ -2,8 +2,8 @@
     <div class="card-header bg-transparent">
         <div class="row align-items-center">
             <div class="col">
-                <h6 class="text-uppercase text-muted ls-1 mb-1">{{ __('Realtime map') }}</h6>
-                <h2 class="mb-0">{{ __('Delivery activities') }}</h2>
+                <h6 class="text-uppercase text-muted ls-1 mb-1">{{ __('qrlanding.realtime-map') }}</h6>
+                <h2 class="mb-0">{{ __('qrlanding.delivery-activities') }}</h2>
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 
-@extends('layouts.front', ['title' => __('User Profile')])
+@extends('layouts.front', ['title' => __('qrlanding.user-profile')])
 @if (strlen(env('RECAPTCHA_SITE_KEY',""))>2)
     @section('head')
     {!! htmlScriptTagJsApi([]) !!}
@@ -48,9 +48,9 @@
                             @endisset
 
                             @if (isset($setup['isupdate']))
-                                <button type="submit" class="btn btn-primary">{{ __('Update')}}</button>
+                                <button type="submit" class="btn btn-primary">{{ __('qrlanding.update')}}</button>
                             @else
-                                <button type="submit" class="btn btn-primary">{{ __('Insert')}}</button>
+                                <button type="submit" class="btn btn-primary">{{ __('qrlanding.insert')}}</button>
                             @endif
                         </form>
                     </div>

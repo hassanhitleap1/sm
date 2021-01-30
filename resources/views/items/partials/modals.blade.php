@@ -2,7 +2,7 @@
     <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="modal-title-notification">{{ __('Add new category') }}</h3>
+                <h3 class="modal-title" id="modal-title-notification">{{ __('qrlanding.add-new-category') }}</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -14,7 +14,7 @@
                             @csrf
                             <input type="hidden" value="{{$restorant_id}}"  name="restaurant_id" />
                             <div class="form-group{{ $errors->has('category_name') ? ' has-danger' : '' }}">
-                                <input class="form-control" name="category_name" id="category_name" placeholder="{{ __('Category name') }} ..." type="text" required>
+                                <input class="form-control" name="category_name" id="category_name" placeholder="{{ __('qrlanding.category-name') }} ..." type="text" required>
                                 @if ($errors->has('category_name'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('category_name') }}</strong>
@@ -22,7 +22,7 @@
                                 @endif
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary my-4">{{ __('Save') }}</button>
+                                <button type="submit" class="btn btn-primary my-4">{{ __('qrlanding.save') }}</button>
                             </div>
                         </form>
                     </div>
@@ -35,7 +35,7 @@
     <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="modal-title-notification">{{ __('Edit category') }}</h3>
+                <h3 class="modal-title" id="modal-title-notification">{{ __('qrlanding.edit-category') }}</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -48,7 +48,7 @@
                             @method('put')
                             <input name="cat_id" id="cat_id" type="hidden" required>
                             <div class="form-group{{ $errors->has('category_name') ? ' has-danger' : '' }}">
-                                <input class="form-control" name="category_name" id="cat_name" placeholder="{{ __('Category name') }} ..." type="text" required>
+                                <input class="form-control" name="category_name" id="cat_name" placeholder="{{ __('qrlanding.category-name') }} ..." type="text" required>
                                 @if ($errors->has('category_name'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('category_name') }}</strong>
@@ -56,7 +56,7 @@
                                 @endif
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary my-4">{{ __('Save') }}</button>
+                                <button type="submit" class="btn btn-primary my-4">{{ __('qrlanding.save') }}</button>
                             </div>
                         </form>
                     </div>
@@ -69,7 +69,7 @@
     <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="modal-title-new-item">{{ __('Add new item') }}</h3>
+                <h3 class="modal-title" id="modal-title-new-item">{{ __('qrlanding.add-new-item') }}</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -80,7 +80,7 @@
                         <form role="form" method="post" action="{{ route('items.store') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group{{ $errors->has('item_name') ? ' has-danger' : '' }}">
-                                <input class="form-control" name="item_name" id="item_name" placeholder="{{ __('Item name') }} ..." type="text" required>
+                                <input class="form-control" name="item_name" id="item_name" placeholder="{{ __('qrlanding.item-name') }} ..." type="text" required>
                                 @if ($errors->has('item_name'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('item_name') }}</strong>
@@ -88,7 +88,7 @@
                                 @endif
                             </div>
                             <div class="form-group{{ $errors->has('item_description') ? ' has-danger' : '' }}">
-                                <textarea class="form-control" id="item_description" name="item_description" rows="3" placeholder="{{ __('Item description') }} ..." required></textarea>
+                                <textarea class="form-control" id="item_description" name="item_description" rows="3" placeholder="{{ __('qrlanding.item-description') }} ..." required></textarea>
                                 @if ($errors->has('item_description'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('item_description') }}</strong>
@@ -96,7 +96,7 @@
                                 @endif
                             </div>
                             <div class="form-group{{ $errors->has('item_price') ? ' has-danger' : '' }}">
-                                <input class="form-control" name="item_price" id="item_price" placeholder="{{ __('Item Price') }} ..." type="number" step="any" required>
+                                <input class="form-control" name="item_price" id="item_price" placeholder="{{ __('qrlanding.item-price') }} ..." type="number" step="any" required>
                                 @if ($errors->has('item_price'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('item_price') }}</strong>
@@ -104,7 +104,7 @@
                                 @endif
                             </div>
                             <div class="form-group text-center{{ $errors->has('item_image') ? ' has-danger' : '' }}">
-                                <label class="form-control-label" for="item_image">{{ __('Item Image') }}</label>
+                                <label class="form-control-label" for="item_image">{{ __('qrlanding.item-image') }}</label>
                                 <div class="text-center">
                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                         <div class="fileinput-preview img-thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;">
@@ -112,18 +112,18 @@
                                         </div>
                                     <div>
                                     <span class="btn btn-outline-secondary btn-file">
-                                    <span class="fileinput-new">{{ __('Select image') }}</span>
+                                    <span class="fileinput-new">{{ __('qrlanding.select-image') }}</span>
                                     <span class="fileinput-exists">{{ __('Change') }}</span>
                                         <input type="file" name="item_image" accept="image/x-png,image/gif,image/jpeg">
                                     </span>
-                                    <a href="#" class="btn btn-outline-secondary fileinput-exists" data-dismiss="fileinput">{{ __('Remove') }}</a>
+                                    <a href="#" class="btn btn-outline-secondary fileinput-exists" data-dismiss="fileinput">{{ __('qrlanding.remove') }}</a>
                                 </div>
                                 </div>
                                 </div>
                             </div>
                             <input name="category_id" id="category_id" type="hidden" required>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary my-4">{{ __('Save') }}</button>
+                                <button type="submit" class="btn btn-primary my-4">{{ __('qrlanding.save') }}</button>
                             </div>
                         </form>
                     </div>
