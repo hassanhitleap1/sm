@@ -100,7 +100,7 @@
                                         @money($plan['price'], env('CASHIER_CURRENCY','usd'),env('DO_CONVERTION',true))/{{ $plan['period']==1?__('m'):__('y') }}
                                         </div>
                                         <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ __('Close') }}</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ __('qrlanding.close') }}</button>
                                         </div>
                                     </div>
                                     </div>

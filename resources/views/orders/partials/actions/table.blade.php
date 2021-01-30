@@ -53,7 +53,7 @@ $lastStatusAlisas=$order->status->pluck('alias')->last();
             <a href="{{ url('updatestatus/accepted_by_restaurant/'.$order->id) }}" class="btn btn-success btn-sm order-action">{{ __('qrlanding.accept') }}</a>
             <a href="{{ url('updatestatus/rejected_by_restaurant/'.$order->id) }}" class="btn btn-sm btn-danger">{{ __('qrlanding.reject') }}</a>
         @else
-            <small>{{ __('qrlanding.no-actions-for-you-right-now!') }}</small>
+            <small>{{ __('qrlanding.no-actions-for-you-right-now') }}</small>
         @endif
 
         @endif
