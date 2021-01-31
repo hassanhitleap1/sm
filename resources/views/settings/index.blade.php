@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => __('Settings')])
+@extends('layouts.app', ['title' => __('qrlanding.settings')])
 
 @section('content')
 <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -10,11 +10,11 @@
                 <div class="card-header bg-white border-0">
                     <div class="row align-items-center">
                         <div class="col-8">
-                            <h3 class="mb-0">{{ __('Settings Management') }}</h3>
+                            <h3 class="mb-0">{{ __('qrlanding.settings-management') }}</h3>
                         </div>
                         <div class="col-4 text-right">
                             @if($hasDemoRestaurants)
-                                <a href="{{ route('admin.restaurants.removedemo') }}" class="btn btn-sm btn-danger">{{ __('Remove demo data') }}</a>
+                                <a href="{{ route('admin.restaurants.removedemo') }}" class="btn btn-sm btn-danger">{{ __('qrlanding.remove-demo-data') }}</a>
                             @endif
                             <a href="{{ route('systemstatus') }}" class="btn btn-sm btn-danger">{{ __('settings.system_status') }}</a>
                         </div>
@@ -74,11 +74,11 @@
                                             @include('partials.input',['id'=>'delivery','name'=>'Delivery cost - fixed','placeholder'=>'Fixed delivery','value'=>$settings->delivery, 'required'=>false])
 
 
-                                            <h6 class="heading-small text-muted mb-4">{{ __('Social Links') }}</h6>
+                                            <h6 class="heading-small text-muted mb-4">{{ __('qrlanding.social-links') }}</h6>
                                             @include('partials.input',['id'=>'facebook','name'=>'Facebook','placeholder'=>'Facebook link here ...','value'=>$settings->facebook, 'required'=>false])
                                             @include('partials.input',['id'=>'instagram','name'=>'Instagram','placeholder'=>'Instagram link here ...','value'=>$settings->instagram, 'required'=>false])
                                             <br/>
-                                            <h6 class="heading-small text-muted mb-4">{{ __('Mobile App') }}</h6>
+                                            <h6 class="heading-small text-muted mb-4">{{ __('qrlanding.mobile-app') }}</h6>
                                             @include('partials.input',['id'=>'mobile_info_title','name'=>'Info Title','placeholder'=>'Info Title text here ...','value'=>$settings->mobile_info_title, 'required'=>false])
                                             @include('partials.input',['id'=>'mobile_info_subtitle','name'=>'Info Subtitle','placeholder'=>'Info Subtitle text here ...','value'=>$settings->mobile_info_subtitle, 'required'=>false])
                                             <br/>
@@ -93,22 +93,22 @@
                                                 $images=[
                                                     ['name'=>'site_logo','label'=>__('Site Logo'),'value'=>config('global.site_logo'),'style'=>'width: 200px;'],
                                                     ['name'=>'restorant_details_image','help'=>"590x400px",'label'=>__('Restaurant Default Image'),'value'=>config('global.restorant_details_image'),'style'=>'width: 200px;'],
-                                                    ['name'=>'restorant_details_cover_image','label'=>__('Restaurant Details Cover Image'),'value'=>config('global.restorant_details_cover_image'),'style'=>'width: 200px;'],
-                                                    ['help'=>"256,256px",'name'=>'favicons','label'=>__('Favicon'),'value'=>'/apple-touch-icon.png','style'=>'width: 120px; height: 120px;']
+                                                    ['name'=>'restorant_details_cover_image','label'=>__('qrlanding.restaurant-details-cover-image'),'value'=>config('global.restorant_details_cover_image'),'style'=>'width: 200px;'],
+                                                    ['help'=>"256,256px",'name'=>'favicons','label'=>__('qrlanding.favicon'),'value'=>'/apple-touch-icon.png','style'=>'width: 120px; height: 120px;']
                                                  ];
 
                                                 if(config('app.isft')){
-                                                    array_splice($images, 1, 0, [['name'=>'search','label'=>__('Search Cover'),'value'=>config('global.search'),'style'=>'width: 200px;']] );
+                                                    array_splice($images, 1, 0, [['name'=>'search','label'=>__('qrlanding.search-cover'),'value'=>config('global.search'),'style'=>'width: 200px;']] );
                                                 }
 
                                                 if(config('app.isqrsaas')){
-                                                    array_splice($images, 1, 0, [['name'=>'site_logo_dark','label'=>__('Site Logo Dark'),'value'=>config('global.site_logo_dark'),'style'=>'width: 200px;']] );
+                                                    array_splice($images, 1, 0, [['name'=>'site_logo_dark','label'=>__('qrlanding.site-logo-dark'),'value'=>config('global.site_logo_dark'),'style'=>'width: 200px;']] );
                                                   
 
                                                     array_push($images,['help'=>"512x512px",'name'=>'qrdemo','label'=>__('Front QR'),'value'=>'/impactfront/img/qrdemo.jpg','style'=>'width: 120px; height: 120px;']);
 
 
-                                                    array_push($images,['help'=>"600x600px", 'name'=>'ftimig0','label'=>__('Flayer image'),'value'=>'/impactfront/img/flayer.png','style'=>'width: 200px; height: 200px;']);
+                                                    array_push($images,['help'=>"600x600px", 'name'=>'ftimig0','label'=>__('qrlanding.flayer-image'),'value'=>'/impactfront/img/flayer.png','style'=>'width: 200px; height: 200px;']);
                                                     array_push($images,['help'=>"600x467px",'name'=>'ftimig1','label'=>__('Feature image #1'),'value'=>'/impactfront/img/menubuilder.jpg','style'=>'width: 180px; height: 130px;']);
                                                     array_push($images,['help'=>"600x467px",'name'=>'ftimig2','label'=>__('Feature image #2'),'value'=>'/impactfront/img/qr_image_builder.jpg','style'=>'width: 180px; height: 130px;']);
                                                     array_push($images,['help'=>"600x467px",'name'=>'ftimig3','label'=>__('Feature image #3'),'value'=>'/impactfront/img/mobile_pwa.jpg','style'=>'width: 180px; height: 130px;']);
@@ -150,7 +150,7 @@
 
                             </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-success mt-4">{{ __('Save') }}</button>
+                            <button type="submit" class="btn btn-success mt-4">{{ __('qrlanding.save') }}</button>
                         </div>
                     </form>
                 </div>
