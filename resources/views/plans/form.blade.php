@@ -50,28 +50,28 @@
 <div class="row">
 <!-- THIS IS SPECIAL -->
 <div class="col-md-6">
-    <label class="form-control-label">{{ __("Plan period") }}</label>
+    <label class="form-control-label">{{ __("qrlanding.plan-period") }}</label>
     <div class="custom-control custom-radio mb-3">
         <input name="period" class="custom-control-input" id="monthly"  @if (isset($plan))  @if ($plan->period == 1) checked @endif @else checked @endif  value="monthly" type="radio">
-        <label class="custom-control-label" for="monthly">{{ __('Monthly') }}</label>
+        <label class="custom-control-label" for="monthly">{{ __('qrlanding.monthly') }}</label>
     </div>
     <div class="custom-control custom-radio mb-3">
         <input name="period" class="custom-control-input" id="anually" value="anually" @if (isset($plan) && $plan->period == 2) checked @endif type="radio">
-        <label class="custom-control-label" for="anually">{{ __('Anually') }}</label>
+        <label class="custom-control-label" for="anually">{{ __('qrlanding.anually') }}</label>
     </div>
 </div>
 
 
 <!-- ORDERS -->
 <div class="col-md-6">
-    <label class="form-control-label">{{ __("Ordering") }}</label>
+    <label class="form-control-label">{{ __("qrlanding.ordering") }}</label>
     <div class="custom-control custom-radio mb-3">
         <input name="ordering" class="custom-control-input" id="enabled" value="enabled"  @if (isset($plan))  @if ($plan->enable_ordering == 1) checked @endif @else checked @endif  type="radio">
-        <label class="custom-control-label" for="enabled">{{ __('Enabled') }}</label>
+        <label class="custom-control-label" for="enabled">{{ __('qrlanding.enabled') }}</label>
     </div>
     <div class="custom-control custom-radio mb-3">
         <input name="ordering" class="custom-control-input" id="disabled" value="disabled" @if (isset($plan) && $plan->enable_ordering == 2) checked @endif type="radio">
-        <label class="custom-control-label" for="disabled">{{ __('Disabled') }}</label>
+        <label class="custom-control-label" for="disabled">{{ __('qrlanding.disabled') }}</label>
     </div>
 </div>
 </div>
@@ -80,5 +80,5 @@
 
 
 <div class="text-center">
-    <button type="submit" class="btn btn-success mt-4">{{ isset($plan)?__('Update plan'):__('SAVE') }}</button>
+    <button type="submit" class="btn btn-success mt-4">{{ isset($plan)?__('qrlanding.update-plan'):__('qrlanding.save') }}</button>
 </div>
