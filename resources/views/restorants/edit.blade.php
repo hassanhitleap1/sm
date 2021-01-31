@@ -1,6 +1,6 @@
 @extends('layouts.app', ['title' => __('qrlanding.orders')])
 @section('admin_title')
-    {{__('Restaurant Management')}}
+    {{__('qrlanding.restaurant-management')}}
 @endsection
 @section('content')
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -20,13 +20,13 @@
                             </div>
                             <div class="col-4 text-right">
                                 @if(auth()->user()->hasRole('admin'))
-                                    <a href="{{ route('admin.restaurants.index') }}" class="btn btn-sm btn-primary">{{ __('Back to list') }}</a>
+                                    <a href="{{ route('admin.restaurants.index') }}" class="btn btn-sm btn-primary">{{ __('qrlanding.back-to-list') }}</a>
                                 @endif
 
                                 @if (env('WILDCARD_DOMAIN_READY',false))
                                     <a target="_blank" href="{{ (isset($_SERVER['HTTPS'])&&$_SERVER["HTTPS"] ?"https://":"http://").$restorant->subdomain.".".str_replace("www.","",$_SERVER['HTTP_HOST']) }}" class="btn btn-sm btn-success">{{ __('View it') }}</a>
                                 @else
-                                    <a target="_blank" href="{{ route('vendor',$restorant->subdomain) }}" class="btn btn-sm btn-success">{{ __('View it') }}</a>
+                                    <a target="_blank" href="{{ route('vendor',$restorant->subdomain) }}" class="btn btn-sm btn-success">{{ __('qrlanding.view-it') }}</a>
                                 @endif
 
                             </div>
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                       <h6 class="heading-small text-muted mb-4">{{ __('Restaurant information') }}</h6>
+                       <h6 class="heading-small text-muted mb-4">{{ __('qrlanding.restaurant-information') }}</h6>
                         @include('partials.flash')
                         @include('restorants.partials.info')
                             <hr />
