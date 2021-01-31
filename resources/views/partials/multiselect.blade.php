@@ -8,7 +8,7 @@
                 <br />
                 <label class="form-control-label">{{ __($select['name']) }}</label>
                 <select class="form-control col-sm"  name="{{ $id."[".$select['id']."]" }}" id="{{  $id."[".$select['id']."]" }}">
-                    <option disabled selected value> {{ __('Select')." ".$select['name']}} </option>
+                    <option disabled selected value> {{ __('qrlanding.select')." ".$select['name']}} </option>
                     @foreach ($select['data'] as $key => $item)
                         @if (isset($select['value'])&&$key==$select['value'])
                             <option value="{{ $key }}" selected>{{$item }}</option>
