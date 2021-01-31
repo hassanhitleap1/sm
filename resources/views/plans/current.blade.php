@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => __('Pages')])
+@extends('layouts.app', ['title' => __('qrlanding.pages')])
 
 @section('content')
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -41,7 +41,7 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">{{ __('Features') }}</th>
+                                    <th scope="col">{{ __('qrlanding.features') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -71,15 +71,15 @@
                             @endif
 
                             @if(strlen($plan['mollie_id'])>2&&env('SUBSCRIPTION_PROCESSOR','Stripe')=='Mollie')
-                                <a href="javascript:openMollieCheckout({{ $plan['id'] }})" class="btn btn-primary">{{__('Switch to ').$plan['name']}}</a>
+                                <a href="javascript:openMollieCheckout({{ $plan['id'] }})" class="btn btn-primary">{{__('qrlanding.switch-to').$plan['name']}}</a>
                             @endif
 
                             @if(strlen($plan['paystack_id'])>2&&env('SUBSCRIPTION_PROCESSOR','Stripe')=='Paystack')
-                                <a href="javascript:openPaystackCheckout({{ $plan['id'] }})" class="btn btn-primary">{{__('Switch to ').$plan['name']}}</a>
+                                <a href="javascript:openPaystackCheckout({{ $plan['id'] }})" class="btn btn-primary">{{__('qrlanding.switch-to').$plan['name']}}</a>
                             @endif
 
                             @if($plan['price']>0&&(env('SUBSCRIPTION_PROCESSOR','Stripe')=='Local'||env('SUBSCRIPTION_PROCESSOR','Stripe')=='local'))
-                                <button  data-toggle="modal" data-target="#paymentModal{{ $plan['id']  }}" class="btn btn-primary">{{__('Switch to ').$plan['name']}}</button>
+                                <button  data-toggle="modal" data-target="#paymentModal{{ $plan['id']  }}" class="btn btn-primary">{{__('qrlanding.switch-to').$plan['name']}}</button>
 
                                 <!-- Modal -->
                                 <div class="modal fade" id="paymentModal{{ $plan['id']  }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -96,7 +96,7 @@
                                         <br /><br />
                                         {{ env('LOCAL_TRANSFER_ACCOUNT')}}
                                         <hr /><br />
-                                        {{ __('Plan price ')}}<br />
+                                        {{ __('qrlanding.plan-price')}}<br />
                                         @money($plan['price'], env('CASHIER_CURRENCY','usd'),env('DO_CONVERTION',true))/{{ $plan['period']==1?__('m'):__('y') }}
                                         </div>
                                         <div class="modal-footer">
@@ -122,7 +122,7 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">{{ __('Subscribe to') }} <span id="plan_name">PLAN_NAME</span></h3>
+                                <h3 class="mb-0">{{ __('qrlanding.subscribe-to') }} <span id="plan_name">PLAN_NAME</span></h3>
                             </div>
 
                         </div>
@@ -133,7 +133,7 @@
                             @csrf
                             <input name="plan_id" id="plan_id" type="hidden" />
                             <div style="width: 100%;" class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                                <input name="name" id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __( 'Name on card' ) }}" value="{{auth()->user()?auth()->user()->name:""}}" required>
+                                <input name="name" id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __( 'qrlanding.name-on card' ) }}" value="{{auth()->user()?auth()->user()->name:""}}" required>
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('name') }}</strong>
@@ -158,7 +158,7 @@
                                 v-if="totalPrice"
                                 type="submit"
                                 class="btn btn-success mt-4 paymentbutton"
-                                >{{ __('Subscribe') }}</button>
+                                >{{ __('qrlanding.subscribe') }}</button>
                           </div>
 
                           </form>
