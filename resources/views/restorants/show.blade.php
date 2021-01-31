@@ -61,7 +61,7 @@
         <nav class="tabbable sticky" style="top: {{ config('app.isqrsaas') ? 64:88 }}px;">
                 <ul class="nav nav-pills bg-white mb-2">
                     <li class="nav-item nav-item-category ">
-                        <a class="nav-link  mb-sm-3 mb-md-0 active" data-toggle="tab" role="tab" href="">{{ __('All categories') }}</a>
+                        <a class="nav-link  mb-sm-3 mb-md-0 active" data-toggle="tab" role="tab" href="">{{ __('qrlanding.all-categories') }}</a>
                     </li>
                     @foreach ( $restorant->categories as $key => $category)
                         @if(!$category->items->isEmpty())
@@ -123,14 +123,14 @@
                 <div class="modal-body p-0">
                     <div class="card bg-secondary shadow border-0">
                         <div class="card-header bg-transparent pb-2">
-                            <h4 class="text-center mt-2 mb-3">{{ __('Call Waiter') }}</h4>
+                            <h4 class="text-center mt-2 mb-3">{{ __('qrlanding.call-waiter') }}</h4>
                         </div>
                         <div class="card-body px-lg-5 py-lg-5">
                             <form role="form" method="post" action="{{ route('call.waiter') }}">
                                 @csrf
                                 @include('partials.fields',$fields)
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary my-4">{{ __('Call Now') }}</button>
+                                    <button type="submit" class="btn btn-primary my-4">{{ __('qrlanding.call-now') }}</button>
                                 </div>
                             </form>
                         </div>
