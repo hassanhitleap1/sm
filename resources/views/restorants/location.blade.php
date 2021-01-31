@@ -1,4 +1,4 @@
-@extends('layouts.front', ['title' => __('Restaurants')])
+@extends('layouts.front', ['title' => __('qrlanding.restaurants')])
 
 @section('content')
 <div class="section section-hero section-shaped">
@@ -30,7 +30,7 @@
                             </figure>
                             <span class="res_title"><b><a href="{{ $link }}">{{ $restorant->name}}</a></b></span><br />
                             <span class="res_description">{{ $restorant->description}}</span><br />
-                            <span class="res_mimimum">{{ __('Minimum order') }}: @money($restorant->minimum, env('CASHIER_CURRENCY','usd'),env('DO_CONVERTION',true))</span>
+                            <span class="res_mimimum">{{ __('qrlanding.minimum-order') }}: @money($restorant->minimum, env('CASHIER_CURRENCY','usd'),env('DO_CONVERTION',true))</span>
 
                         </div>
                     </div>
