@@ -31,7 +31,7 @@
                         <form method="post" action="{{ route('pages.store') }}" autocomplete="off" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group{{ $errors->has('title') ? ' has-danger' : '' }}">
-                                <label class="form-control-label" for="title">{{ __('Title') }}</label>
+                                <label class="form-control-label" for="title">{{ __('qrlanding.title') }}</label>
                                 <input type="text" name="title" id="title" class="form-control form-control-alternative{{ $errors->has('title') ? ' is-invalid' : '' }}" placeholder="{{ __('Title here ...') }}" value="" required autofocus>
                                 @if ($errors->has('title'))
                                 <span class="invalid-feedback" role="alert">
