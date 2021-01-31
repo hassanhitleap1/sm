@@ -29,7 +29,7 @@
                     <div class="card-header bg-transparent">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h6 class="text-uppercase text-light ls-1 mb-1">{{ __('Overview') }}</h6>
+                                <h6 class="text-uppercase text-light ls-1 mb-1">{{ __('qrlanding.overview') }}</h6>
                                 <h2 class="text-white mb-0">{{ __('qrlanding.salesvalue') }}</h2>
                             </div>
 
@@ -53,7 +53,7 @@
                                 <canvas id="chart-sales" class="chart-canvas"></canvas>
                             </div>
                         @else
-                            <p class="text-white">{{ __('No sales right now!') }}</p>
+                            <p class="text-white">{{ __('qrlanding.no-sales-right-now') }}</p>
                         @endif
                     </div>
                 </div>
@@ -63,8 +63,8 @@
                     <div class="card-header bg-transparent">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h6 class="text-uppercase text-muted ls-1 mb-1">{{ __('Performance') }}</h6>
-                                <h2 class="mb-0">{{ __('Total orders') }}</h2>
+                                <h6 class="text-uppercase text-muted ls-1 mb-1">{{ __('qrlanding.performance') }}</h6>
+                                <h2 class="mb-0">{{ __('qrlanding.total-orders') }}</h2>
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                                 <canvas id="chart-orders" class="chart-canvas"></canvas>
                             </div>
                         @else
-                            <p>{{ __('No orders right now!') }}</p>
+                            <p>{{ __('qrlanding.no-orders-right-now') }}</p>
                         @endif
                     </div>
                 </div>
