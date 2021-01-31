@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => __('Restaurants')])
+@extends('layouts.app', ['title' => __('qrlanding.restaurants')])
 @section('admin_title')
     {{__('Restaurants')}}
 @endsection
@@ -14,10 +14,10 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">{{ __('Restaurants') }}</h3>
+                                <h3 class="mb-0">{{ __('qrlanding.restaurants') }}</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ route('admin.restaurants.create') }}" class="btn btn-sm btn-primary">{{ __('Add Restaurant') }}</a>
+                                <a href="{{ route('admin.restaurants.create') }}" class="btn btn-sm btn-primary">{{ __('qrlanding.add-restaurant') }}</a>
                                 @if(auth()->user()->hasRole('admin') && env('ENABLE_IMPORT_CSV', true))
                                     <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modal-import-restaurants">{{ __('Import from CSV') }}</button>
                                 @endif
@@ -32,12 +32,12 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">{{ __('Name') }}</th>
+                                    <th scope="col">{{ __('qrlanding.name') }}</th>
                                     <th scope="col">{{ __('Logo') }}</th>
-                                    <th scope="col">{{ __('Owner') }}</th>
-                                    <th scope="col">{{ __('Owner email') }}</th>
-                                    <th scope="col">{{ __('Creation Date') }}</th>
-                                    <th scope="col">{{ __('Active') }}</th>
+                                    <th scope="col">{{ __('qrlanding.owner') }}</th>
+                                    <th scope="col">{{ __('qrlanding.owner-email') }}</th>
+                                    <th scope="col">{{ __('qrlanding.creation-date') }}</th>
+                                    <th scope="col">{{ __('qrlanding.active') }}</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
@@ -46,16 +46,16 @@
                                     <tr>
                                         <td><a href="{{ route('admin.restaurants.edit', $restorant) }}">{{ $restorant->name }}</a></td>
                                         <td><img class="rounded" src={{ $restorant->icon }} width="50px" height="50px"></img></td>
-                                        <td>{{  $restorant->user?$restorant->user->name:__('Deleted') }}</td>
+                                        <td>{{  $restorant->user?$restorant->user->name:__('qrlanding.deleted') }}</td>
                                         <td>
-                                            <a href="mailto: {{ $restorant->user?$restorant->user->email:""  }}">{{  $restorant->user?$restorant->user->email:__('Deleted')  }}</a>
+                                            <a href="mailto: {{ $restorant->user?$restorant->user->email:""  }}">{{  $restorant->user?$restorant->user->email:__('qrlanding.deleted')  }}</a>
                                         </td>
                                         <td>{{ $restorant->created_at->format(env('DATETIME_DISPLAY_FORMAT','d M Y H:i')) }}</td>
                                         <td>
                                            @if($restorant->active == 1)
-                                                <span class="badge badge-success">{{ __('Active') }}</span>
+                                                <span class="badge badge-success">{{ __('qrlanding.active') }}</span>
                                            @else
-                                                <span class="badge badge-warning">{{ __('Not active') }}</span>
+                                                <span class="badge badge-warning">{{ __('qrlanding.not-active') }}</span>
                                            @endif
                                         </td>
                                         <td class="text-right">
@@ -65,16 +65,16 @@
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 
-                                                        <a class="dropdown-item" href="{{ route('admin.restaurants.edit', $restorant) }}">{{ __('Edit') }}</a>
-                                                        <a class="dropdown-item" href="{{ route('admin.restaurants.loginas', $restorant) }}">{{ __('Login as') }}</a>
+                                                        <a class="dropdown-item" href="{{ route('admin.restaurants.edit', $restorant) }}">{{ __('qrlanding.edit') }}</a>
+                                                        <a class="dropdown-item" href="{{ route('admin.restaurants.loginas', $restorant) }}">{{ __('qrlanding.login-as') }}</a>
                                                         <form action="{{ route('admin.restaurants.destroy', $restorant) }}" method="post">
                                                             @csrf
                                                             @method('delete')
                                                             @if($restorant->active == 0)
-                                                                <a class="dropdown-item" href="{{ route('restaurant.activate', $restorant) }}">{{ __('Activate') }}</a>
+                                                                <a class="dropdown-item" href="{{ route('restaurant.activate', $restorant) }}">{{ __('qrlanding.activate') }}</a>
                                                             @else
                                                             <button type="button" class="dropdown-item" onclick="confirm('{{ __("Are you sure you want to deactivate this restaurant?") }}') ? this.parentElement.submit() : ''">
-                                                                {{ __('Deactivate') }}
+                                                                {{ __('qrlanding.deactivate') }}
                                                             </button>
                                                             @endif
                                                             
