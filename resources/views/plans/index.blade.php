@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => __('Pages')])
+@extends('layouts.app', ['title' => __('qrlanding.pages')])
 
 @section('content')
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -11,10 +11,10 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">{{ __('Plans') }}</h3>
+                                <h3 class="mb-0">{{ __('qrlanding.plans') }}</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ route('plans.create') }}" class="btn btn-sm btn-primary">{{ __('Add plan') }}</a>
+                                <a href="{{ route('plans.create') }}" class="btn btn-sm btn-primary">{{ __('qrlanding.add-plan') }}</a>
                             </div>
                         </div>
                     </div>
@@ -27,12 +27,12 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">{{ __('Name') }}</th>
-                                    <th scope="col">{{ __('Price') }}</th>
-                                    <th scope="col">{{ __('Period') }}</th>
+                                    <th scope="col">{{ __('qrlanding.name') }}</th>
+                                    <th scope="col">{{ __('qrlanding.price') }}</th>
+                                    <th scope="col">{{ __('qrlanding.period') }}</th>
 
-                                    <th scope="col">{{ __('Items limit') }}</th>
-                                    <th scope="col">{{ __('Ordering') }}</th>
+                                    <th scope="col">{{ __('qrlanding.items-limit') }}</th>
+                                    <th scope="col">{{ __('qrlanding.ordering') }}</th>
 
 
                                     @if(env('SUBSCRIPTION_PROCESSOR','Stripe')=='Paddle')<th scope="col">{{ __('Paddle ID') }}</th>@endif
@@ -49,9 +49,9 @@
                                 <tr>
                                     <td>{{ $plan->name }} </td>
                                     <td>{{ $plan->price }}</td>
-                                    <td>{{ $plan->period == 1 ? __("Monthly") : __("Anually") }}</td>
-                                    <td>{{ $plan->limit_items == 0 ? __("Unlimited") : $plan->limit_items }}</td>
-                                    <td>{{ $plan->enable_ordering == 1 ? __("Enabled") : __("Disabled") }}</td>
+                                    <td>{{ $plan->period == 1 ? __("qrlanding.monthly") : __("qrlanding.anually") }}</td>
+                                    <td>{{ $plan->limit_items == 0 ? __("qrlanding.unlimited") : $plan->limit_items }}</td>
+                                    <td>{{ $plan->enable_ordering == 1 ? __("qrlanding.enabled") : __("qrlanding.disabled") }}</td>
                                     @if(env('SUBSCRIPTION_PROCESSOR','Stripe')=='Paddle')<td >{{ $plan->paddle_id }}</td>@endif
                                     @if(env('SUBSCRIPTION_PROCESSOR','Stripe')=='Stripe')<td >{{ $plan->stripe_id }}</td>@endif
                                     @if(env('SUBSCRIPTION_PROCESSOR','Stripe')=='PayPal')<td >{{ $plan->paypal_id }}</td>@endif
@@ -66,9 +66,9 @@
                                                 <form action="{{ route('plans.destroy', $plan) }}" method="post">
                                                     @csrf
                                                     @method('delete')
-                                                    <a class="dropdown-item" href="{{ route('plans.edit', $plan) }}">{{ __('Edit') }}</a>
+                                                    <a class="dropdown-item" href="{{ route('plans.edit', $plan) }}">{{ __('qrlanding.edit') }}</a>
                                                     <button type="button" class="dropdown-item" onclick="confirm('{{ __("Are you sure you want to delete this plan?") }}') ? this.parentElement.submit() : ''">
-                                                        {{ __('Delete') }}
+                                                        {{ __('qrlanding.delete') }}
                                                      </button>
                                                 </form>
                                                 </div>
