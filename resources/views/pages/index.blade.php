@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => __('Pages')])
+@extends('layouts.app', ['title' => __('qrlanding.pages')])
 
 @section('content')
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -11,10 +11,10 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">{{ __('Pages') }}</h3>
+                                <h3 class="mb-0">{{ __('qrlanding.pages') }}</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ route('pages.create') }}" class="btn btn-sm btn-primary">{{ __('Add page') }}</a>
+                                <a href="{{ route('pages.create') }}" class="btn btn-sm btn-primary">{{ __('qrlanding.add-page') }}</a>
                             </div>
                         </div>
                     </div>
@@ -27,9 +27,9 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">{{ __('Title') }}</th>
-                                    <th scope="col">{{ __('Content') }}</th>
-                                    <th scope="col">{{ __('Show as link') }}</th>
+                                    <th scope="col">{{ __('qrlanding.title') }}</th>
+                                    <th scope="col">{{ __('qrlanding.content') }}</th>
+                                    <th scope="col">{{ __('qrlanding.show-as-link') }}</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
@@ -37,7 +37,7 @@
                             @foreach ($pages as $page)
                                 <tr>
                                     <td>{{ $page->title }} </td>
-                                    <td><a href="{{ route('pages.edit', $page) }}">{{ __('Click for details') }}</a></td>
+                                    <td><a href="{{ route('pages.edit', $page) }}">{{ __('qrlanding.click-for-details') }}</a></td>
                                     <td>
                                         <label class="custom-toggle">
                                             <input type="checkbox" id="showAsLink" class="showAsLink" pageid="{{ $page->id }}" <?php if($page->showAsLink == 1){echo "checked";} ?>>
@@ -54,7 +54,7 @@
                                                     @csrf
                                                     @method('delete')
                                                     <button type="button" class="dropdown-item" onclick="confirm('{{ __("Are you sure you want to delete this page?") }}') ? this.parentElement.submit() : ''">
-                                                        {{ __('Delete') }}
+                                                        {{ __('qrlanding.delete') }}
                                                      </button>
                                                 </form>
                                                 </div>
